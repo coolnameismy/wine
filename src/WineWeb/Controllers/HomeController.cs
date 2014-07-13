@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.IO;
+using WineWeb.BL;
+using WineWeb.Models;
 
 namespace WineWeb.Controllers
 {
@@ -47,6 +49,18 @@ namespace WineWeb.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+        public ActionResult Command()
+        {
+            string command = Request.QueryString["command"];
+            switch (command)
+            {
+                case "initdata" :
+                    AppInitDB appInitDB = new AppInitDB();
+                    appInitDB.InitData();
+                    break;
+            }
             return View();
         }
     }

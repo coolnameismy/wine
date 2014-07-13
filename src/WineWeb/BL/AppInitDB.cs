@@ -28,7 +28,7 @@ namespace WineWeb.BL
 
             for (int i = 0; i < 20; i++ )
             {
-                var encyclopedia = new Encyclopedia { Id = Guid.NewGuid().ToString(), thum = "userUpload/" + i + ".jpg", date = DateTime.Now, title = i + "_title", content = i + "_content" };
+                var encyclopedia = new Encyclopedia { Id = Guid.NewGuid().ToString(), thum = "userUpload/baikeListThum.jpg", date = DateTime.Now, title = i + "_title", content = i + "_content" };
                 collection.Insert(encyclopedia);
             }
          

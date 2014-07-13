@@ -1,0 +1,52 @@
+﻿@using WineWeb.Models
+@using WineWeb.BL
+@model WineWeb.Models.Pagination
+@{
+    
+}
+<!--pager start-->
+<div class="pager">
+    @* 当页码为1时不显示*@
+    @if (Model.TotalPages > 1)
+    {
+
+       if(Model.HasPreviousPage)
+        {
+<a href="@Html.UrlSet(Request, "pageIndex", (Model.PageIndex - 1))"><em class="page_prev"></em></a>
+        }
+        for (int i = Model.Start; i <= Model.End; i++)
+        {
+            string url = Html.UrlSet(Request, "pageIndex", i - 1);
+            if (i == Model.PageIndex + 1)
+            {
+                //在当前页面的几个页号中寻找当前页号                
+        <a href="@url" class="cur">@i.ToString()</a>
+            }
+            else
+            { 
+        <a title="第 @i.ToString() 页" href="@url" >@i.ToString()</a>
+            }
+            @*<span>......</span>*@
+        }
+        
+        if (Model.HasNextPage)
+        {
+        <a href="@Html.UrlSet(Request, "pageIndex", (Model.PageIndex + 1))"><em class="page_next"></em></a>
+        }
+    }
+</div>
+
+
+
+
+@*<!--pager start-->
+        <div class="pager">
+            <a href="#"><em class="page_prev"></em></a>
+            <a href="#" class="cur">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <span>......</span>
+            <a href="#">12</a><a href="#">
+            <em class="page_next"></em></a>
+        </div>*@

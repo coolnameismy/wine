@@ -21,22 +21,25 @@ namespace WineWeb.Controllers
 
         public ActionResult Index()
         {
+
             MongoDatabase db = Common.GetDatabase();
-
             var collection = db.GetCollection<Encyclopedia>("Encyclopedia");
-
             var query = collection.AsQueryable<Encyclopedia>();
-
-            var result = query.OrderByDescending(i => i.date).ToList();
+            var result = query;
             foreach (var item in result)
             {
                 string str = item.title;
                 // process employees named "John"
             }
 
+            int pageIndex = Request.QueryString["pageIndex"].QueryStringIntHelp();
+            int pageSize = 6; //设置每页显示条数
+            ViewBag.Pagination = new Pagination(pageIndex, pageSize, result.Count());
 
-            return View(result);
+            return View(result.OrderByDescending(i => i.date).Skip(pageIndex * pageSize).Take(pageSize).ToList());
         }
+
+         
 
     }
    

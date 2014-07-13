@@ -22,13 +22,13 @@
 							<a href="#">品牌故事</a><a href="about.html">選酒理念</a>
 						</div>
 					</li>
-					<li class="baike"><a href="../Encyclopedia">酒事百科</a></li>
+					<li class="baike"><a href="baikelist.html">酒事百科</a></li>
 					<li class="goods"><a href="goodsindex.html">推介产品</a>
 						<div class="subnav">
 							<a href="goodslist.html">红葡萄酒</a><a href="goodslist.html">白葡萄酒</a><a href="goodslist.html">气泡酒及其它</a>
 						</div>
 					</li>
-					<li class="history"><a href="histroy.html">酒庄历史</a>
+					<li class="history"><a href="#" class="cur">酒庄历史</a>
 						<div class="subnav">
 							<a href="histroy.html">夏梦酒庄</a>
 						</div>
