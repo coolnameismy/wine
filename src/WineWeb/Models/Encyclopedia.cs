@@ -5,6 +5,7 @@ using System.Web;
 
 namespace WineWeb.Models
 {
+    //酒事百科 
     public class Encyclopedia
     {
         public string Id { get; set; }
