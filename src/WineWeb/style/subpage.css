@@ -1,0 +1,90 @@
+@hcarset "utf-8";
+
+.main{width: 100%; background: url(../images/bg01.jpg) repeat-x left top;}
+.main_wrap{width: 1100px; margin: 0 auto; background: url(../images/main_bg.jpg) no-repeat;}
+.sitenav{text-align: right; color: #000; font-size: 14px; padding: 30px 0;}
+.sitenav a{ font-size: 14px; color: #9f9f9f; margin:0 4px;}
+.sitenav span{ font-size:14px; margin-left: 4px; }
+.main_wrap h1{text-align: center; line-height: 48px; font-size: 40px;}
+.main_wrap h1 strong{font-weight:600; color: #000;}
+.main_wrap h1 span{ color: #949494; font-weight: normal; font-family: "Times New Roman"; font-style:italic;}
+
+.content{width: 1100px; margin: 60px auto 20px auto; overflow: hidden; border-bottom: solid 1px #ccc; }
+.con_box{width: 980px; margin: 0 auto; font: normal 14px/24px Arial;}
+.con_box p{text-indent: 2em; }
+.con_box img{display: block; margin: 0 auto; }
+
+.other{width: 1100px;overflow: hidden; height: 28px; line-height: 28px; margin: 20px 0;}
+.print{float: right;width: 72px; background: url(../images/icon_print.gif) no-repeat left 6px;}
+.print a{ display: block; text-indent: 20px; color: #916638; line-height: 28px;}
+.other span{display: block; float: right; color: #b5b5b5; margin: 0 8px;}
+.share{float: right;}
+
+.articlenav{width: 1100px; margin: 0 auto; overflow: hidden;color: #a78a6a; font:bold 14px/1.5 "Microsoft Yahei"; }
+.articlenav span a{color:#a78a6a; font-weight: normal; }
+.articlenav .art_prev{float: left; }
+.articlenav .art_next{float: right;}
+
+
+.mb50{margin-bottom: 50px;}
+.mt50{margin-top: 50px;}
+.tac{text-align: center;}
+.c:after{content:".";display:block;font-size:0;height:0;clear:both;visibility:hidden}
+.c{zoom:1}
+.spilt{height: 0px; border: 0px;border-bottom: 1px solid #cbcbca;margin-top: 6px;}
+.pro-wrap{width: 1100px;margin: 0 auto; padding-top: 60px;}
+.pro-info{ padding-right: 50px;}
+.pro-img{float: left;width: 504px;}
+.pro-info-c{ margin-left: 504px;}
+.pro-name{font: bold 48px/55px simsun;color: #a78a6a;}
+.pro-more-d{margin-top: 30px;}
+.pro-more-d p{line-height: 24px; font-size: 14px;}
+.pro-other-info{margin-top: 20px;}
+.pro-other-info dd{font-size: 14px; line-height: 24px;}
+.btn-wrap{}
+.howToBuy-btn{ display: inline-block;*zoom:1;_display: inline;width: 198px; font: bold 16px/36px "microsoft yahei"; color: #fff;text-align: center;background-color: #a78a6a;border-radius: 2px; }
+.howToBuy-btn:hover{ background-color: #7a654e;text-decoration: none;}
+
+.pro-rem-c{margin-left: 504px; padding-top: 12px;}
+.rem-tit{font:bold 21px/30px simsun;color: #a78a6a; margin-bottom: 15px;}
+.pro-rem-det p{ line-height: 30px;font-size: 14px;}
+.ex-lh40 p{ line-height: 40px;}
+
+/*--histroy--*/
+.histroy_main{width: 100%; background: url(../images/histroy_bg_01.jpg) no-repeat center top;}
+.histroy_main_wrap{width: 1100px; height: 765px; margin: 0 auto;}
+.histroy_box{ width: 494px; margin-top: 268px;}
+.histroy_box h1,
+.address_box h1,
+.team_box h1{position: relative; height: 96px;}
+.histroy_box h1 strong,
+.address_box h1 strong,
+.team_box h1 strong{font-weight:600;font-size: 40px;line-height: 48px; color: #000;}
+.histroy_box h1 span{  position: absolute; left: 160px; top: 24px; color: #a6927c; font: italic 36px/48px "Times New Roman";}
+.histroy_box h1 em{display: block; width: 352px; border-bottom: solid 1px #ccc; position: absolute; left: 80px; top: 62px;*top:44px;}
+.histroy_box p,
+.address_box p,
+.team_box p{font: normal 16px/24px simsun; color: #464646;}
+
+.address_main{width: 100%; margin: 40px 0; background: url(../images/histroy_bg_02.jpg) no-repeat center top;}
+.address_main_wrap{width: 1100px; height: 320px; margin: 0 auto;}
+.address_box{ width: 460px; margin-left:596px; padding-top: 50px;}
+.address_box h1 strong{color: #fff;}
+.address_box h1 span{  position: absolute; left: 160px; top: 24px; color: #a6927c; font: italic 36px/48px "Times New Roman";}
+.address_box h1 em{display: block; width: 352px; border-bottom: solid 1px #ad9b7e; position: absolute; left: 80px; top: 62px;*top:44px;}
+
+.concept{width: 1100px; margin: 0 auto;}
+.concept h1{text-align: center; line-height: 48px; font-size: 40px; position: relative;}
+.concept h1 strong{font-weight:600; color: #000;}
+.concept h1 span{ color: #a6927c; font-weight: normal; font-family: "Times New Roman"; font-style:italic;}
+.concept h1 em{display: block; width: 352px; border-bottom: solid 1px #ccc; position: absolute; left: 374px; top:90px;*top:40px;}
+.concept ul{ width: 1100px; margin: 30px auto; overflow: hidden;}
+.concept ul li{ float: left; width: 394px; margin:10px 0px 10px 140px; font: normal 16px/30px simsun; color: #434343; background: url(../images/dot.png) no-repeat left 8px; padding-left: 16px;}
+.concept .concept_img{text-align: center;}
+.concept .concept_img img{margin: 0 10px;}
+
+.team_main{width: 100%; margin: 40px 0; background: url(../images/histroy_bg_03.jpg) no-repeat center top;}
+.team_main_wrap{width: 1100px; height: 464px; margin: 0 auto;}
+.team_box{width: 460px; margin-left: 58px; padding-top: 160px;}
+.team_box h1 span{  position: absolute; left: 160px; top: 24px; color: #a6927c; font: italic 36px/48px "Times New Roman";}
+.team_box h1 em{display: block; width: 352px; border-bottom: solid 1px #ccc; position: absolute; left: 80px; top: 62px;*top:44px;}
