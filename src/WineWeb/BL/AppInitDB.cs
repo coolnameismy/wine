@@ -76,8 +76,9 @@ namespace WineWeb.BL
                             date = DateTime.Now,
                             title1 = i + "_Cabernet Franc",
                             title2 = i + "_品丽珠",
-                            content = i + "_别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......",
-                            category = category.SingleOrDefault(t => t.Id == c.ToString())
+                            title3 = i + "_别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的_别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的_别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......",
+                            content = i + "contentcontentcontentcontentcontent",
+                            categoryId = c.ToString()
                         };
                         collection.Insert(product);
                     }
@@ -90,8 +91,9 @@ namespace WineWeb.BL
                             date = DateTime.Now,
                             title1 = i + "拉哥杰古堡",
                             title2 = i + "_优级酿制2010佳酿",
-                            content = i + "_别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......",
-                            category = category.SingleOrDefault(t => t.Id == c.ToString())
+                            title3 = i + "_别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的_别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的_别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......",
+                            content = i + "contentcontentcontentcontentcontent",
+                            categoryId = c.ToString()
                         };
                         collection.Insert(product);
                     }

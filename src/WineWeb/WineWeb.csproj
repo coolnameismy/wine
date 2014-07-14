@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EncyclopediaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -503,6 +504,8 @@
     <Content Include="wine\.svn\pristine\c4\c4b048ac1e42d8f15e888c4fd0ddbc3306f28da9.svn-base" />
     <Content Include="wine\.svn\pristine\df\dfdd633983cd35737ec4a5918d14ceba7c3f320b.svn-base" />
     <Content Include="wine\.svn\pristine\e3\e340b66f9216ca774b2c66c84263a9e717d76a05.svn-base" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

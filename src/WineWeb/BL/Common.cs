@@ -30,5 +30,21 @@ namespace WineWeb.BL
             //  打开数据库testdb 
             return server.GetDatabase("testdb");
         }
+
+        //字符串长度处理
+        public static string HandleStringLength(string str, int len)
+        {
+            if (str == null)
+            {
+                return "";
+            }
+
+            else if (str.Length > len)
+            {
+                return str.Substring(0, len - 1) + "...";
+            }
+            else
+            { return str; }
+        }
     }
 }
