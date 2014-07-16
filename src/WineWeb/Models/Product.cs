@@ -26,5 +26,9 @@ namespace WineWeb.Models
                 return Common.HandleStringLength(this.title3, 30);
             } 
         }
+        public string Link
+        {
+            get { return "Product/Details/" + this.Id; }
+        }
     }
 }

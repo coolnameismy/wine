@@ -1,0 +1,20 @@
+﻿@model WineWeb.Models.Product
+@{
+    ViewBag.Title = "Details";
+}
+<link href="~/style/subpage.css" rel="stylesheet" />
+<div class="main_wrap">
+    <div class="sitenav"><a href="index.html">首页</a>&gt;<a href="#" target="_blank">推介产品</a>&gt;<span>红葡萄酒</span></div>
+    <h1><strong>推介产品</strong><br />
+        <span>Recommendation</span></h1>
+    <!--product start-->
+    <div class="pro-wrap">
+        <div class="pro-info c">
+        
+                <h2 class="pro-name">@Model.title1</h2>
+         
+            <p>@Model.content</p>
+        </div>
+</div>
+		<!--product end-->
+</div>

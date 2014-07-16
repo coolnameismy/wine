@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Linq;
+using System.Data.Entity;
 using System.Web.Mvc;
 using WineWeb.BL;
 using WineWeb.Models;
@@ -41,6 +43,15 @@ namespace WineWeb.Controllers
             //分类名称
             ViewBag.CategoryName = category.FirstOrDefault(i => i.Id == id).name;
             return View(products.OrderByDescending(i => i.date).Skip(pageIndex * pageSize).Take(pageSize).ToList());
+        }
+        public ActionResult Details(string id)
+        {
+            MongoDatabase db = Common.GetDatabase();
+            var category = db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>().ToList();
+            var product = db.GetCollection<Product>("Product").AsQueryable<Product>().Where(i=>i.Id==id).FirstOrDefault();
+            //分类名称
+            ViewBag.CategoryName = category.FirstOrDefault(i => i.Id == product.categoryId).name;
+            return View(product);
         }
     }
 }

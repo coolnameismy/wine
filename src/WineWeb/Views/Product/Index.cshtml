@@ -1,12 +1,46 @@
-﻿@model List<WineWeb.Models.Product>
+﻿@model  List<WineWeb.Models.Product>
 
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@*<h2>Index</h2>
 @foreach (var item in Model)
 {
     <p>@item.title1</p>
-}
+}*@
+
+	<div class="main_wrap">
+		<div class="sitenav"><a href="index.html">首页</a>&gt<span>推介产品</span></div>
+		<h1><strong>推介产品</strong><br /><span>Recommendation</span></h1>
+		<div class="goodslist">
+
+            @if (Model.Count() > 0)
+            {
+                foreach (var group in Model.GroupBy(i => i.categoryId))
+                {
+                    <div class="goods_wrap wrap_bg">
+				        <h4><span>groupId @group.Key</span></h4>
+				        <div class="subtitle"><strong>推荐</strong><a href="Product/List/@group.Key" target="_blank">查看更多&nbsp;&nbsp;&gt;&gt;</a></div>
+                        @foreach(var item in group.OrderByDescending(i=>i.date).Take(5))
+                        {
+                             <div class="goodsbox">
+					            <a href="@item.Link" target="_blank"><img src="images/goods_01.jpg" title="红葡萄酒" /></a>
+					            <h5><span>@item.title1</span><br/><span>@item.title2</span></h5>
+					            <p>@item.ViewTitle3</p>
+					            <a href="@item.Link" target="_self" class="more">&gt;&nbsp;了解详情</a>
+				            </div>
+                        }
+ 
+			        </div>
+                    
+                }
+                
+            }
+
+
+	 
+
+		</div>
+	</div>

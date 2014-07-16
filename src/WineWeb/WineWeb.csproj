@@ -506,6 +506,7 @@
     <Content Include="wine\.svn\pristine\e3\e340b66f9216ca774b2c66c84263a9e717d76a05.svn-base" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Product\List.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
