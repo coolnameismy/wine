@@ -39,7 +39,12 @@ namespace WineWeb.Controllers
             return View(result.OrderByDescending(i => i.date).Skip(pageIndex * pageSize).Take(pageSize).ToList());
         }
 
-         
+        public ActionResult Details(string id)
+        {
+            MongoDatabase db = Common.GetDatabase();
+            var encyclopedia = db.GetCollection<Encyclopedia>("Encyclopedia").AsQueryable<Encyclopedia>().Where(i => i.Id == id).FirstOrDefault();
+            return View(encyclopedia);
+        }
 
     }
    

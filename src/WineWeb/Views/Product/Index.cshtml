@@ -3,6 +3,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Dictionary<string, string> dic = (Dictionary<string, string>)ViewBag.category;
 }
 
 @*<h2>Index</h2>
@@ -21,7 +22,11 @@
                 foreach (var group in Model.GroupBy(i => i.categoryId))
                 {
                     <div class="goods_wrap wrap_bg">
-				        <h4><span>groupId @group.Key</span></h4>
+                        @if (dic.ContainsKey(group.Key))
+                        {
+				        <h4><span>@dic[group.Key]</span></h4>
+                            
+                        }
 				        <div class="subtitle"><strong>推荐</strong><a href="Product/List/@group.Key" target="_blank">查看更多&nbsp;&nbsp;&gt;&gt;</a></div>
                         @foreach(var item in group.OrderByDescending(i=>i.date).Take(5))
                         {

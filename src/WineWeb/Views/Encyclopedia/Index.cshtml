@@ -11,10 +11,10 @@
             @foreach (var item in Model)
             {
                 <div class="listbox">
-				    <a href="#" target="_blank"><img src="~/@item.thum"></a>
-				    <h3><a href="#" target="_blank">@item.title</a></h3>
+				    <a href="@item.Link" target="_blank"><img src="~/@item.thum"></a>
+				    <h3><a href="@item.Link" target="_blank">@item.title</a></h3>
 				    <p>@item.content</p>
-				    <a href="#" class="more">&gt;&nbsp;&nbsp;阅读全文</a>
+				    <a href="@item.Link" class="more">&gt;&nbsp;&nbsp;阅读全文</a>
 			    </div>
             }
  

@@ -22,8 +22,8 @@ namespace WineWeb.Controllers
         {
             MongoDatabase db = Common.GetDatabase();
             var products = db.GetCollection<Product>("Product").AsQueryable<Product>();
-            var category = db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>().ToList();
-       
+            var category = db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>().ToDictionary(i=>i.Id,i=>i.name);
+            ViewBag.category = category;
             //int pageIndex = Request.QueryString["pageIndex"].QueryStringIntHelp();
             //int pageSize = 6; //设置每页显示条数
             //ViewBag.Pagination = new Pagination(pageIndex, pageSize, result.Count());

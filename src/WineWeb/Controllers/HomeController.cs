@@ -53,6 +53,7 @@ namespace WineWeb.Controllers
         }
         public ActionResult Command()
         {
+            //http://localhost:1790/home/command?command=initdata
             string command = Request.QueryString["command"];
             switch (command)
             {
