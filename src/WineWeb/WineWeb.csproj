@@ -191,6 +191,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\Admin_defaultController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EncyclopediaManageController.cs" />
     <Compile Include="BL\AppInitDB.cs" />
     <Compile Include="BL\Common.cs" />
     <Compile Include="BL\ExtendMethod.cs" />
@@ -428,6 +431,10 @@
     <Content Include="wine\style\jslides.css" />
     <Content Include="wine\style\list.css" />
     <Content Include="wine\style\subpage.css" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Admin_default\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\EncyclopediaManage\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -511,6 +518,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="wine\.svn\tmp\" />
     <Folder Include="wine\fonts\" />
   </ItemGroup>
