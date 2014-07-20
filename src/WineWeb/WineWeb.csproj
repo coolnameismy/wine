@@ -194,6 +194,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\Admin_defaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\EncyclopediaManageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductManageController.cs" />
     <Compile Include="BL\AppInitDB.cs" />
     <Compile Include="BL\Common.cs" />
     <Compile Include="BL\ExtendMethod.cs" />
@@ -312,6 +313,8 @@
     <Content Include="js\common.js" />
     <Content Include="js\jquery-1.8.0.min.js" />
     <Content Include="js\jquery.jslides.js" />
+    <Content Include="Scripts\Admin.js" />
+    <Content Include="Scripts\jjmcAdmin.js" />
     <Content Include="style\base.css" />
     <Content Include="style\index.css" />
     <Content Include="style\jslides.css" />
@@ -435,6 +438,8 @@
     <Content Include="Areas\Admin\Views\Admin_default\Index.cshtml" />
     <Content Include="Areas\Admin\Views\EncyclopediaManage\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductManage\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminPagination.cshtml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />

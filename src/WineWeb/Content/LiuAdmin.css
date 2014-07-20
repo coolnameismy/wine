@@ -1,0 +1,119 @@
+﻿/*----------------------------------------------------------
+这个文件是刘彦玮添加的样式，注入admin.css
+    !important
+----------------------------------------------------------*/
+/*导入补充样式*/
+ 
+/*新建按钮*/
+.CreateButton {
+    text-indent: -9999em;
+    background-image: url('AdminImg/but_add.gif');
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 32px;
+    line-height: 32px;
+    display: block !important;
+    float: left;
+    margin-bottom:20px;
+    margin-left:10px;
+}  
+/*批量删除按钮样式*/
+ .allDelete {
+    text-indent: -9999em;
+    background-image: url('AdminImg/but_delete.gif');
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 32px;
+    line-height: 32px;
+    display: block !important;
+    float: left;
+    margin-bottom:20px;
+    margin-left:10px;
+    border:none;
+}
+/*导出到excel按钮*/ 
+.ExcelButtin {
+    float: left;
+    margin-top:5px !important;  
+    margin-left:10px !important;
+}
+
+/*面包屑样式*/
+.breadcrumbsWrap
+{
+   height: 32px;
+   line-height: 32px;
+   background-color:rgb(232, 238, 244);
+   font-family: 微软雅黑;
+  
+}
+.breadcrumbs {
+  float: left;
+}
+
+.breadcrumbs p {
+    display: inline;
+    line-height: 32px;
+    margin-left: 10px;
+}
+.breadcrumbs .level1{
+    
+}
+.breadcrumbs .level2 {
+    font-weight: bold;
+}
+
+/*搜索按钮*/
+.search {
+     float: right;
+    
+     margin-right:20px;
+     margin-top: 4px;
+}
+.BtnSearch {
+    text-indent: -9999em;
+    background-image: url('AdminImg/btn_search.gif');
+    background-repeat: no-repeat;
+    width: 53px;
+    height: 23px;
+    /*line-height: 32px;*/
+    display: block !important;
+    float: left;
+    margin-left:5px;
+    margin-top:4px;
+    float:right;
+}
+/*确认删除提示样式*/
+.exLink
+{
+    background-color: #DEEFF7;
+    padding: 15px;
+    width: 320px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -60px;
+    z-index: 99999;
+    text-align: center;
+}
+
+.exLink p
+{
+    text-align: left;
+}
+
+.exConfirm,
+.exCancel
+{
+    background-color: #0061DE;
+    color: #fff !important;
+    font: bold 12px "微软雅黑";
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    margin: 10px 6px 0;
+}

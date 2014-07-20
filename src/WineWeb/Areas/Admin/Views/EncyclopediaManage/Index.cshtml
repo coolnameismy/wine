@@ -2,9 +2,30 @@
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
+ 
+@section Search{
+    @Html.Partial("_Search")
+}
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+@section Scripts {
+  
+  @*  <script type="text/javascript">
+        $(function () {
+            var SourceWords = ["糖尿病", "心脑血管疾病", "骨骼健康及神经外科疾病", "妇女健康", "组织修复", "微创手术", "传染病常识", "器械消毒"];
+            $(".Keyword").autocomplete({
+                source: SourceWords, minLength: 0
+            });
+            //.autocomplete("search","");
+            $(".Keyword").click(function () {
+                $(".Keyword").autocomplete("search", "");
+            })
+        })
+    </script>*@
+
+}
+<h2>Index</h2>
+ <p>
+     <a href="Create"  class="btn btn-primary"><span>新建</span><i class="icon icon-plus"></i></a>
 </p>
 <table>
     <tr>
@@ -52,3 +73,4 @@
 }
 
 </table>
+ @Html.Partial("_AdminPagination", (WineWeb.Models.Pagination)ViewBag.Pagination)

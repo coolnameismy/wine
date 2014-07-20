@@ -18,7 +18,25 @@ namespace WineWeb
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
 
-            // 使用要用于开发和学习的 Modernizr 的开发版本。然后，当你做好
+            bundles.Add(new ScriptBundle("~/bundles/ckeditorAndckefinder").Include(
+                      "~/ckeditor/ckeditor.js",
+                      "~/ckfinder/ckfinder_v1.js"));
+
+
+
+            bundles.Add(new ScriptBundle("~/bundles/jjmcddition").Include(
+                //"~/scripts/jquery-migrate-1.2.1.min.js",
+                // "~/scripts/jquery.jcarousel.min.js",
+                    "~/scripts/flowplayer-{version}.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jjmc").Include(
+
+                 "~/scripts/TweenMax.js",
+                 "~/scripts/common.js"
+               ));
+
+
+            // 使用 Modernizr 的开发版本进行开发和了解信息。然后，当你做好
             // 生产准备时，请使用 http://modernizr.com 上的生成工具来仅选择所需的测试。
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
@@ -38,6 +56,11 @@ namespace WineWeb
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            bundles.Add(new StyleBundle("~/Content/Admin").Include("~/Content/LiuAdmin.css", "~/Content/LiuAdmin.css"));
+            bundles.Add(new StyleBundle("~/Content/ckeditorAndckefinder").Include("~/ckeditor/skins/moono/editor.css",
+                "~/ckeditor/skins/moono/dialog.css"));
+
         }
     }
 }

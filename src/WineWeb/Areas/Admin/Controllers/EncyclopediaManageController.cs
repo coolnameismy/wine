@@ -50,17 +50,17 @@ namespace WineWeb.Areas.Admin.Controllers
             {
 
              
-                var collection = db.GetCollection<Encyclopedia>("entities");
-                collection.Insert(add);
-                //图片上传
-                string image_Path = string.Empty;
-                string _Path = "/Content/userfiles/Upload/";//设置上传路径
-                HttpPostedFileBase image = Request.Files["Upfile"];
-                image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
-                add.thum = image_Path;
-                add.date = DateTime.Now;
+                //var collection = db.GetCollection<Encyclopedia>("entities");
+                //collection.Insert(add);
+                ////图片上传
+                //string image_Path = string.Empty;
+                //string _Path = "/Content/userfiles/Upload/";//设置上传路径
+                //HttpPostedFileBase image = Request.Files["Upfile"];
+                //image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
+                //add.thum = image_Path;
+                //add.date = DateTime.Now;
          
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
 
             return View(add);
@@ -88,70 +88,70 @@ namespace WineWeb.Areas.Admin.Controllers
         //
         // POST: /Admin/jjmcNewsCRUD/Edit/5
 
-        [HttpPost]
-        [ValidateInput(false)]
-        public ActionResult Edit(JNJNews jnjnews)
-        {
-            if (ModelState.IsValid)
-            {
-                var collection = db.GetCollection<Encyclopedia>("entities");
-                var query = Query<Encyclopedia>.EQ(e => e.Id, id);
-            //var update = Update<Entity>.Set(e => e.Name, "Harry"); // update modifiers
-            //collection.Update(query, update);
+        //[HttpPost]
+        //[ValidateInput(false)]
+        //public ActionResult Edit(JNJNews jnjnews)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var collection = db.GetCollection<Encyclopedia>("entities");
+        //        var query = Query<Encyclopedia>.EQ(e => e.Id, id);
+        //    //var update = Update<Entity>.Set(e => e.Name, "Harry"); // update modifiers
+        //    //collection.Update(query, update);
 
-                collection.Save(entity);
+        //        collection.Save(entity);
 
-                if (entity == null)
-                {
-                    return HttpNotFound();
-                }
-                //ViewBag.Category = new SelectList(db.JNJNewsCategory, "Id", "Name", jnjnews.Category);
-                return View(entity);
+        //        if (entity == null)
+        //        {
+        //            return HttpNotFound();
+        //        }
+        //        //ViewBag.Category = new SelectList(db.JNJNewsCategory, "Id", "Name", jnjnews.Category);
+        //        return View(entity);
 
 
               
-                //图片上传
-                string image_Path = string.Empty;
-                string _Path = "/Content/userfiles/Upload/";//设置上传路径
-                string date = Request.Form["DateTime"];
-                jnjnews.Date = Convert.ToDateTime(date);
-                HttpPostedFileBase image = Request.Files["Upfile"];
-                image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
-                if (!string.IsNullOrEmpty(image_Path))
-                {
-                    jnjnews.Thum = image_Path;
-                }
-                //分类置顶新闻唯一，设置置顶新闻需先清空类表的置顶新闻
-                if (jnjnews.IsCategoryTop)
-                {
-                    //判断设置置顶时，缩略图和导读是否为空
-                    if (string.IsNullOrEmpty(jnjnews.SubTitle) || string.IsNullOrEmpty(jnjnews.Thum))
-                    {
-                        ModelState.AddModelError("", "设置置顶时，导读和缩略图不能为空。");
-                        ViewBag.Category = new SelectList(db.JNJNewsCategory, "Id", "Name", jnjnews.Category);
-                        return View(jnjnews);
-                    }
-                    var curTopNews = db.JNJNews.Where(i => i.Category == jnjnews.Category).Where(i => i.IsCategoryTop == true).ToList();
-                    foreach (var item in curTopNews)
-                    {
-                        if (item != jnjnews)
-                        {
-                            item.IsCategoryTop = false;
-                        }
+        //        //图片上传
+        //        string image_Path = string.Empty;
+        //        string _Path = "/Content/userfiles/Upload/";//设置上传路径
+        //        string date = Request.Form["DateTime"];
+        //        jnjnews.Date = Convert.ToDateTime(date);
+        //        HttpPostedFileBase image = Request.Files["Upfile"];
+        //        image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
+        //        if (!string.IsNullOrEmpty(image_Path))
+        //        {
+        //            jnjnews.Thum = image_Path;
+        //        }
+        //        //分类置顶新闻唯一，设置置顶新闻需先清空类表的置顶新闻
+        //        if (jnjnews.IsCategoryTop)
+        //        {
+        //            //判断设置置顶时，缩略图和导读是否为空
+        //            if (string.IsNullOrEmpty(jnjnews.SubTitle) || string.IsNullOrEmpty(jnjnews.Thum))
+        //            {
+        //                ModelState.AddModelError("", "设置置顶时，导读和缩略图不能为空。");
+        //                ViewBag.Category = new SelectList(db.JNJNewsCategory, "Id", "Name", jnjnews.Category);
+        //                return View(jnjnews);
+        //            }
+        //            var curTopNews = db.JNJNews.Where(i => i.Category == jnjnews.Category).Where(i => i.IsCategoryTop == true).ToList();
+        //            foreach (var item in curTopNews)
+        //            {
+        //                if (item != jnjnews)
+        //                {
+        //                    item.IsCategoryTop = false;
+        //                }
 
-                    }
-                }
+        //            }
+        //        }
 
 
              
 
 
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            //ViewBag.Category = new SelectList(db.JNJNewsCategory, "Id", "Name", jnjnews.Category);
-            return View(jnjnews);
-        }
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+        //    //ViewBag.Category = new SelectList(db.JNJNewsCategory, "Id", "Name", jnjnews.Category);
+        //    return View(jnjnews);
+        //}
 
         //
         // GET: /Admin/jjmcNewsCRUD/Delete/5
@@ -169,14 +169,14 @@ namespace WineWeb.Areas.Admin.Controllers
         ////
         // POST: /Admin/jjmcNewsCRUD/Delete/5
 
-        [ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            JNJNews jnjnews = db.JNJNews.Find(id);
-            db.JNJNews.Remove(jnjnews);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        //[ActionName("Delete")]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    //JNJNews jnjnews = db.JNJNews.Find(id);
+        //    //db.JNJNews.Remove(jnjnews);
+        //    //db.SaveChanges();
+        //    //return RedirectToAction("Index");
+        //}
 
     }
 }

@@ -1,0 +1,60 @@
+﻿@using WineWeb.Models
+@using WineWeb.BL
+@model WineWeb.Models.Pagination
+@{
+    
+}
+<!--pager start-->
+<div class="pager">
+    @* 当页码为1时不显示*@
+    @if (Model.TotalPages > 1)
+    {
+
+       if(Model.HasPreviousPage)
+        {
+<a href="@Html.UrlSet(Request, "pageIndex", (Model.PageIndex - 1))"><em class="page_prev"></em></a>
+        }
+        for (int i = Model.Start; i <= Model.End; i++)
+        {
+            string url = Html.UrlSet(Request, "pageIndex", i - 1);
+            if (i == Model.PageIndex + 1)
+            {
+                //在当前页面的几个页号中寻找当前页号                
+        <a href="@url" class="cur">@i.ToString()</a>
+            }
+            else
+            { 
+        <a title="第 @i.ToString() 页" href="@url" >@i.ToString()</a>
+            }
+            @*<span>......</span>*@
+        }
+        
+        if (Model.HasNextPage)
+        {
+        <a href="@Html.UrlSet(Request, "pageIndex", (Model.PageIndex + 1))"><em class="page_next"></em></a>
+        }
+    }
+</div>
+<style>
+    .pager{text-align: center; margin-top:20px}
+    .pager a{display: inline-block; vertical-align: middle; width: 24px; height: 36px; text-align: center; font: bold 14px/36px "Microsoft Yahei"; color: #898989; border:solid 1px #ccc; text-decoration: none; margin: 0 2px;}
+    .pager a:hover,
+    .pager a.cur{color: #e60011;}
+    .pager a em{display: inline-block; width: 0; height: 0; border-width: 5px; position: relative;overflow:hidden;vertical-align:middle; *top:8px;}
+    .pager .page_prev{ border-style:  dashed solid dashed dashed; border-color:transparent #a6927c transparent transparent; right: 3px;}
+    .pager .page_next{ border-style:  dashed dashed dashed solid; border-color:transparent transparent transparent #a6927c; left: 3px;}
+</style>
+
+
+
+@*<!--pager start-->
+<div class="pager">
+    <a href="#"><em class="page_prev"></em></a>
+    <a href="#" class="cur">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <span>......</span>
+    <a href="#">12</a><a href="#">
+    <em class="page_next"></em></a>
+</div>*@

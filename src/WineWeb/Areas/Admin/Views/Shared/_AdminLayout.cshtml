@@ -1,39 +1,38 @@
 ﻿<!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
- 
-	<title>葡萄酒后台管理</title>
- 
-    <link rel="stylesheet" href="~/Areas/Admin/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Areas/Admin/css/bootstrap-responsive.min.css" />
-    <link rel="stylesheet" href="~/Areas/Admin/css/fullcalendar.css" />
-    <link rel="stylesheet" href="~/Areas/Admin/css/unicorn.main.css" />
-    <link rel="stylesheet" href="~/Areas/Admin/css/unicorn.grey.css" class="skin-color" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Admin.css" rel="stylesheet" />
+    <link href="~/Content/LiuAdmin.css" rel="stylesheet" />
+       
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/ckeditorAndckefinder")
+    <script src="~/Scripts/jjmcAdmin.js"></script>
+    <link href="~/Areas/Admin/js/jquery.ui.liuautocomplete.css" rel="stylesheet" />
 
-    <script src="~/Areas/Admin/js/excanvas.min.js"></script>
-    <script src="~/Areas/Admin/js/jquery.min.js"></script>
-    <script src="~/Areas/Admin/js/jquery.ui.custom.js"></script>
-    <script src="~/Areas/Admin/js/bootstrap.min.js"></script>
-    <script src="~/Areas/Admin/js/jquery.flot.min.js"></script>
-    <script src="~/Areas/Admin/js/jquery.flot.resize.min.js"></script>
-    <script src="~/Areas/Admin/js/jquery.peity.min.js"></script>
-    <script src="~/Areas/Admin/js/fullcalendar.min.js"></script>
-    <script src="~/Areas/Admin/js/unicorn.js"></script>
-    <script src="~/Areas/Admin/js/unicorn.dashboard.js"></script>
-</head>
-<body>
-  @RenderBody()
  
-@*@Html.Partial("_footer")*@
+</head>
+
+<body>
+ 
+<div class="page">
+      <div class="breadcrumbsWrap">
+          <div class="breadcrumbs">
+                <div class="Controller">@Html.ViewContext.RouteData.Values["controller"]</div>
+                 <div class="Action" >@Html.ViewContext.RouteData.Values["action"]</div>
+          </div>         
+           @RenderSection("Search",false)
+         
+      </div>
+      @RenderBody()     
+
+</div>
+
+<footer>
+</footer>
+    @RenderSection("Scripts",false)
 </body>
 </html>
-
-
-
-
-
-
-
-
- 
