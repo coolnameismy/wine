@@ -20,6 +20,7 @@
 
          <div class="editor-label">
                 @Html.LabelFor(model => model.thum, "缩略图  最佳：420 x 230像素")
+                @Html.ValidationMessageFor(model => model.thum)
             </div>
             <div class="editor-field">
                 @if (!string.IsNullOrEmpty(Model.thum))
