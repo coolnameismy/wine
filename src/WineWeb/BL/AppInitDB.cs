@@ -15,6 +15,8 @@ namespace WineWeb.BL
 
         public void InitData()
         {
+            //清除数据库
+            database.Drop();
             //酒事百科
             EncyclopediaCollectionInit();
 
@@ -30,13 +32,13 @@ namespace WineWeb.BL
         //初始化酒事百科collection
         private void EncyclopediaCollectionInit()
         {
-            database.Drop();
+        
             //新建集合Encyclopedia并插入初始化数据
             var encyclopediaCollection = database.GetCollection<Encyclopedia>("Encyclopedia");
 
             for (int i = 0; i < 20; i++)
             {
-                var encyclopedia = new Encyclopedia { Id = Guid.NewGuid().ToString(), thum = "userUpload/baikeListThum.jpg", date = DateTime.Now, title = i + "_title", content = i + "_content" };
+                var encyclopedia = new Encyclopedia { Id = Guid.NewGuid().ToString(), thum = "userUpload/baikeListThum.jpg", date = DateTime.Now, title1 = i + "_title1", title2 = i + "_title2", content = i + "_content" };
                 encyclopediaCollection.Insert(encyclopedia);
             }
         }

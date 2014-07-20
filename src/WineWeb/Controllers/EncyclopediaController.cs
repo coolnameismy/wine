@@ -26,11 +26,7 @@ namespace WineWeb.Controllers
             var collection = db.GetCollection<Encyclopedia>("Encyclopedia");
             var query = collection.AsQueryable<Encyclopedia>();
             var result = query;
-            foreach (var item in result)
-            {
-                string str = item.title;
-                // process employees named "John"
-            }
+            
 
             int pageIndex = Request.QueryString["pageIndex"].QueryStringIntHelp();
             int pageSize = 6; //设置每页显示条数

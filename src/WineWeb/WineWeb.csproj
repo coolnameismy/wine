@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CKFinder">
+      <HintPath>ckfinder\bin\Debug\CKFinder.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MongoDB.Bson">
       <HintPath>library\MongoDB.Bson.dll</HintPath>
@@ -198,6 +201,7 @@
     <Compile Include="BL\AppInitDB.cs" />
     <Compile Include="BL\Common.cs" />
     <Compile Include="BL\ExtendMethod.cs" />
+    <Compile Include="BL\FileManage.cs" />
     <Compile Include="BL\HtmlHelpers.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EncyclopediaController.cs" />
@@ -440,6 +444,8 @@
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Views\ProductManage\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminPagination.cshtml" />
+    <Content Include="Areas\Admin\Views\EncyclopediaManage\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\EncyclopediaManage\Edit.cshtml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -524,6 +530,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Content\userfiles\images\" />
+    <Folder Include="Content\userfiles\Upload\" />
     <Folder Include="wine\.svn\tmp\" />
     <Folder Include="wine\fonts\" />
   </ItemGroup>

@@ -23,54 +23,72 @@
     </script>*@
 
 }
-<h2>Index</h2>
- <p>
-     <a href="Create"  class="btn btn-primary"><span>新建</span><i class="icon icon-plus"></i></a>
-</p>
+
+@using (Html.BeginForm("BatchDelete", "EncyclopediaManage", FormMethod.Post, new { onsubmit = "return confirm('您确定要全部删除？');" }))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+        <input type="submit" value="全部删除" />
+        @Html.ValidationSummary(true)
+    </p>
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.thum)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.date)
+          缩略图
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.title)
+            日期
         </th>
         <th>
+           标题
+        </th>
+         @*  <th>
+            @Html.DisplayNameFor(model => model.title2)
+        </th>
+         <th>
             @Html.DisplayNameFor(model => model.content)
-        </th>
-        <th>
+        </th>*@
+       @* <th>
             @Html.DisplayNameFor(model => model.Link)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
+           <input type="checkbox" name="delete_@item.Id"/>
+       </td>
+        <td>
             @Html.DisplayFor(modelItem => item.thum)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.date)
+             
+             @item.date.ToShortDateString()
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.title)
+            @Html.DisplayFor(modelItem => item.title1)
         </td>
-        <td>
+          @* <td>
+            @Html.DisplayFor(modelItem => item.title2)
+        </td>
+          <td>
             @Html.DisplayFor(modelItem => item.content)
-        </td>
-        <td>
+        </td>*@
+       @* <td>
             @Html.DisplayFor(modelItem => item.Link)
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        @*    @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+            <a href="/Admin/EncyclopediaManage/Delete/@item.Id" rel="external">删除</a>
         </td>
     </tr>
 }
 
 </table>
+}
  @Html.Partial("_AdminPagination", (WineWeb.Models.Pagination)ViewBag.Pagination)

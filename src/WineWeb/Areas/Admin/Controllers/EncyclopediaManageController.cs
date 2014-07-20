@@ -48,19 +48,18 @@ namespace WineWeb.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                var collection = db.GetCollection<Encyclopedia>("Encyclopedia");
+                add.Id = Guid.NewGuid().ToString();
+                //图片上传
+                string image_Path = string.Empty;
+                string _Path = "/Content/userfiles/Upload/";//设置上传路径
+                HttpPostedFileBase image = Request.Files["Upfile"];
+                image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
+                add.thum = image_Path;
+                add.date = DateTime.Now.AddHours(8);
 
-             
-                //var collection = db.GetCollection<Encyclopedia>("entities");
-                //collection.Insert(add);
-                ////图片上传
-                //string image_Path = string.Empty;
-                //string _Path = "/Content/userfiles/Upload/";//设置上传路径
-                //HttpPostedFileBase image = Request.Files["Upfile"];
-                //image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
-                //add.thum = image_Path;
-                //add.date = DateTime.Now;
-         
-                //return RedirectToAction("Index");
+                 var result = collection.Insert(add);
+                return RedirectToAction("Index");
             }
 
             return View(add);
@@ -71,11 +70,9 @@ namespace WineWeb.Areas.Admin.Controllers
 
         public ActionResult Edit(string id)
         {
-            var collection = db.GetCollection<Encyclopedia>("entities");
+            var collection = db.GetCollection<Encyclopedia>("Encyclopedia");
             var query = Query<Encyclopedia>.EQ(e => e.Id, id);
             var entity = collection.FindOne(query);
-            entity.title = "Title-Dick";
-            collection.Save(entity);
 
             if (entity == null)
             {
@@ -88,95 +85,93 @@ namespace WineWeb.Areas.Admin.Controllers
         //
         // POST: /Admin/jjmcNewsCRUD/Edit/5
 
-        //[HttpPost]
-        //[ValidateInput(false)]
-        //public ActionResult Edit(JNJNews jnjnews)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var collection = db.GetCollection<Encyclopedia>("entities");
-        //        var query = Query<Encyclopedia>.EQ(e => e.Id, id);
-        //    //var update = Update<Entity>.Set(e => e.Name, "Harry"); // update modifiers
-        //    //collection.Update(query, update);
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Edit(Encyclopedia encyclopedia)
+        {
+            if (ModelState.IsValid)
+            {
+                var collection = db.GetCollection<Encyclopedia>("Encyclopedia");
+                var query = Query<Encyclopedia>.EQ(e => e.Id, encyclopedia.Id);
+                var entity = collection.FindOne(query);
+                if (query == null)
+                {
+                    return HttpNotFound();
+                }
+                
+                //图片上传
+                string image_Path = string.Empty;
+                string _Path = "/Content/userfiles/Upload/";//设置上传路径
+                string date = Request.Form["DateTime"];
+                encyclopedia.date = Convert.ToDateTime(date);
+                HttpPostedFileBase image = Request.Files["Upfile"];
+                image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
+                if (!string.IsNullOrEmpty(image_Path))
+                {
+                    encyclopedia.thum = image_Path;
+                }
 
-        //        collection.Save(entity);
+                entity = encyclopedia;
+                collection.Save(entity);
 
-        //        if (entity == null)
-        //        {
-        //            return HttpNotFound();
-        //        }
-        //        //ViewBag.Category = new SelectList(db.JNJNewsCategory, "Id", "Name", jnjnews.Category);
-        //        return View(entity);
+                return RedirectToAction("Index");
+            }
 
-
-              
-        //        //图片上传
-        //        string image_Path = string.Empty;
-        //        string _Path = "/Content/userfiles/Upload/";//设置上传路径
-        //        string date = Request.Form["DateTime"];
-        //        jnjnews.Date = Convert.ToDateTime(date);
-        //        HttpPostedFileBase image = Request.Files["Upfile"];
-        //        image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
-        //        if (!string.IsNullOrEmpty(image_Path))
-        //        {
-        //            jnjnews.Thum = image_Path;
-        //        }
-        //        //分类置顶新闻唯一，设置置顶新闻需先清空类表的置顶新闻
-        //        if (jnjnews.IsCategoryTop)
-        //        {
-        //            //判断设置置顶时，缩略图和导读是否为空
-        //            if (string.IsNullOrEmpty(jnjnews.SubTitle) || string.IsNullOrEmpty(jnjnews.Thum))
-        //            {
-        //                ModelState.AddModelError("", "设置置顶时，导读和缩略图不能为空。");
-        //                ViewBag.Category = new SelectList(db.JNJNewsCategory, "Id", "Name", jnjnews.Category);
-        //                return View(jnjnews);
-        //            }
-        //            var curTopNews = db.JNJNews.Where(i => i.Category == jnjnews.Category).Where(i => i.IsCategoryTop == true).ToList();
-        //            foreach (var item in curTopNews)
-        //            {
-        //                if (item != jnjnews)
-        //                {
-        //                    item.IsCategoryTop = false;
-        //                }
-
-        //            }
-        //        }
+            return View(encyclopedia);
+        }
 
 
-             
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(string id)
+        {
+            var collection = db.GetCollection<Encyclopedia>("Encyclopedia");
+            var query = Query<Encyclopedia>.EQ(e => e.Id, id);
+            var result = collection.Remove(query);
+            return RedirectToAction("Index");
+        }
+        // 批量删除
+        [HttpPost]
+        public ActionResult BatchDelete()
+        {
+
+            var collection = db.GetCollection<Encyclopedia>("Encyclopedia");
+            var query = collection.AsQueryable<Encyclopedia>();
+            var result = query;
+
+            foreach (var item in result)
+            {
+                string deleteId = "delete_" + item.Id;
+                if (Request.Form[deleteId] == "on")
+                {
+                    //删除
+                   var del = Query<Encyclopedia>.EQ(e => e.Id, item.Id);
+                   collection.Remove(del);
+                }
+            }
+ 
+            return RedirectToAction("index");
+
+        }
+
+        //搜索功能
+        public ActionResult Search()
+        {
+            string Keyword = Request.QueryString["Keyword"];
+            var collection = db.GetCollection<Encyclopedia>("Encyclopedia");
+            var query = collection.AsQueryable<Encyclopedia>().Where(i => i.title1.Contains(Keyword) || i.title2.Contains(Keyword) || i.content.Contains(Keyword));
+            var result = query;
 
 
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-        //    //ViewBag.Category = new SelectList(db.JNJNewsCategory, "Id", "Name", jnjnews.Category);
-        //    return View(jnjnews);
-        //}
+            int pageIndex = Request.QueryString["pageIndex"].QueryStringIntHelp();
+            int pageSize = 15; //设置每页显示条数
+            ViewBag.Pagination = new Pagination(pageIndex, pageSize, result.Count());
 
-        //
-        // GET: /Admin/jjmcNewsCRUD/Delete/5
+            return View("Index", result.OrderByDescending(i => i.date).Skip(pageIndex * pageSize).Take(pageSize).ToList());
 
-        //public ActionResult Delete(int id = 0)
-        //{
-        //    JNJNews jnjnews = db.JNJNews.Find(id);
-        //    if (jnjnews == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(jnjnews);
-        //}
 
-        ////
-        // POST: /Admin/jjmcNewsCRUD/Delete/5
 
-        //[ActionName("Delete")]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    //JNJNews jnjnews = db.JNJNews.Find(id);
-        //    //db.JNJNews.Remove(jnjnews);
-        //    //db.SaveChanges();
-        //    //return RedirectToAction("Index");
-        //}
+          
 
+        }
     }
 }
