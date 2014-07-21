@@ -12,10 +12,10 @@ namespace WineWeb.Models
         
         private DateTime _date { get; set; }
 
-        [Required(ErrorMessage = "必填字段")]
+        //[Required(ErrorMessage = "必填字段")]
         public string Id { get; set; }
 
-        [Required(ErrorMessage = "必填字段")]
+        //[Required(ErrorMessage = "必填字段")]
         public string thum { get; set; }
 
         [Required(ErrorMessage = "必填字段")]

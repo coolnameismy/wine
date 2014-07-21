@@ -33,14 +33,15 @@
                 {
                     <p>暂无图片 </p>
                 }
-                <input id="Upfile" type="file" name="Upfile" />
+                <input id="thum" type="file" name="thum" value="@Model.thum"/>
             </div>
 
          <div class="editor-label">
             @Html.LabelFor(model => model.date, "日期")
         </div>
         <div class="editor-field">
-            <input type="text" name="DateTime" id="DateTime" value="@Model.date.ToShortDateString()" />
+            <input type="text" name="DateTime" id="DateTime" value="@Model.date" />
+           @* <input type="text" name="DateTime" id="DateTime" value="@Model.date.ToShortDateString()" />*@
             @Html.ValidationMessageFor(model => model.date)
         </div>
 

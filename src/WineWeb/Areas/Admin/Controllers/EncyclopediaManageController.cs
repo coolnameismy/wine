@@ -53,7 +53,7 @@ namespace WineWeb.Areas.Admin.Controllers
                 //图片上传
                 string image_Path = string.Empty;
                 string _Path = "/Content/userfiles/Upload/";//设置上传路径
-                HttpPostedFileBase image = Request.Files["Upfile"];
+                HttpPostedFileBase image = Request.Files["thum"];
                 image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
                 add.thum = image_Path;
                 add.date = DateTime.Now.AddHours(8);
@@ -103,8 +103,8 @@ namespace WineWeb.Areas.Admin.Controllers
                 string image_Path = string.Empty;
                 string _Path = "/Content/userfiles/Upload/";//设置上传路径
                 string date = Request.Form["DateTime"];
-                encyclopedia.date = Convert.ToDateTime(date);
-                HttpPostedFileBase image = Request.Files["Upfile"];
+                encyclopedia.date = Convert.ToDateTime(date).AddHours(8);
+                HttpPostedFileBase image = Request.Files["thum"];
                 image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
                 if (!string.IsNullOrEmpty(image_Path))
                 {
