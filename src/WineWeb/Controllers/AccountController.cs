@@ -32,17 +32,28 @@ namespace WineWeb.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
-            if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
-            {
-                return RedirectToLocal(returnUrl);
-            }
+            //if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
+            //{
+            //    return RedirectToLocal(returnUrl);
+            //}
 
-            // 如果我们进行到这一步时某个地方出错，则重新显示表单
-            ModelState.AddModelError("", "提供的用户名或密码不正确。");
-            return View(model);
+            //// 如果我们进行到这一步时某个地方出错，则重新显示表单
+            //ModelState.AddModelError("", "提供的用户名或密码不正确。");
+            //return View(model);
+            FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket(
+                   1,
+                   model.UserName,
+                   DateTime.Now,
+                   DateTime.Now.AddMinutes(30),
+                   false,
+                   "admins"
+                   );
+            string encryptedTicket = FormsAuthentication.Encrypt(authTicket);
+            System.Web.HttpCookie authCookie = new System.Web.HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+            System.Web.HttpContext.Current.Response.Cookies.Add(authCookie);
+            return RedirectToLocal("/Admin");
         }
 
         //
@@ -52,8 +63,8 @@ namespace WineWeb.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            WebSecurity.Logout();
-
+ 
+            FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
 

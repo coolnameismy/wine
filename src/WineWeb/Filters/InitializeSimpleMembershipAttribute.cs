@@ -18,7 +18,7 @@ namespace WineWeb.Filters
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             // 确保每次启动应用程序时只初始化一次 ASP.NET Simple Membership
-            LazyInitializer.EnsureInitialized(ref _initializer, ref _isInitialized, ref _initializerLock);
+            //LazyInitializer.EnsureInitialized(ref _initializer, ref _isInitialized, ref _initializerLock);
         }
 
         private class SimpleMembershipInitializer

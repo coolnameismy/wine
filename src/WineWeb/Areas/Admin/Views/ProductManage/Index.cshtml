@@ -1,14 +1,15 @@
 ﻿@model IEnumerable<WineWeb.Models.Product>
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    Dictionary<string, string> dic = (Dictionary<string, string>)ViewBag.Category;
 }
- 
+
 @section Search{
     @Html.Partial("_Search")
 }
 
 @section Scripts {
-  
+
     <script type="text/javascript">
         $(function () {
             var SourceWords = ["红葡萄酒", "白葡萄酒", "气泡酒及其他"];
@@ -20,60 +21,64 @@
                 $(".Keyword").autocomplete("search", "");
             })
         })
-          
+
     </script>
 
 }
 <h2>Index</h2>
- <p>
-     <a href="Create"  class="btn btn-primary"><span>新建</span><i class="icon icon-plus"></i></a>
-</p>
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.thum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.date)
-        </th>
-        <th>
-             @Html.DisplayNameFor(model => model.title1)
-        </th>
-      @*  <th>
-            @Html.DisplayNameFor(model => model.content)
-        </th>*@
-        <th>
-            @Html.DisplayNameFor(model => model.Link)
-        </th>
-        <th></th>
-    </tr>
+@using (Html.BeginForm("BatchDelete", "ProductManage", FormMethod.Post, new { onsubmit = "return confirm('您确定要全部删除？');" }))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+        <input type="submit" value="全部删除" />
+        @Html.ValidationSummary(true)
+    </p>
+    <table>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.thum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.title1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.categoryId)
+            </th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.thum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.title1)
-        </td>
-       @* <td>
-            @Html.DisplayFor(modelItem => item.content)
-        </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.Link)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" name="delete_@item.Id"/>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.thum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.title1)
+                </td>
+                <td>
+                    @dic[item.categoryId]
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+          @* @Html.ActionLink("Details", "Details", new { id=item.Id }) |*@
+                    <a href="/Admin/ProductManage/Delete/@item.Id" rel="external">删除</a>
+                </td>
+            </tr>
+        }
+
+    </table>
 }
-    
-</table>
- 
- @Html.Partial("_AdminPagination", (WineWeb.Models.Pagination)ViewBag.Pagination)
- 
+@Html.Partial("_AdminPagination", (WineWeb.Models.Pagination)ViewBag.Pagination)

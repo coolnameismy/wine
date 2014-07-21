@@ -30,9 +30,151 @@ namespace WineWeb.Areas.Admin.Controllers
             int pageIndex = Request.QueryString["pageIndex"].QueryStringIntHelp();
             int pageSize = 15; //设置每页显示条数
             ViewBag.Pagination = new Pagination(pageIndex, pageSize, result.Count());
+            ViewBag.Category = db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>().ToDictionary(i=>i.Id,i=>i.name);
 
             return View(result.OrderByDescending(i => i.date).Skip(pageIndex * pageSize).Take(pageSize).ToList());
         }
+        public ActionResult Create()
+        {
+            ViewBag.categoryId = new SelectList(db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>(), "Id", "name");
+            return View();
+        }
 
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Create(Product add)
+        {
+            if (ModelState.IsValid)
+            {
+                var collection = db.GetCollection<Product>("Product");
+                add.Id = Guid.NewGuid().ToString();
+                //图片上传
+                string image_Path = string.Empty;
+                string _Path = "/Content/userfiles/Upload/";//设置上传路径
+                HttpPostedFileBase image = Request.Files["thum"];
+                image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
+                add.thum = image_Path;
+                add.date = DateTime.Now.AddHours(8);
+
+                var result = collection.Insert(add);
+                return RedirectToAction("Index");
+            }
+            ViewBag.categoryId = new SelectList(db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>(), "Id", "name");
+            return View(add);
+        }
+
+
+        public ActionResult Edit(string id)
+        {
+            var collection = db.GetCollection<Product>("Product");
+            var query = Query<Product>.EQ(e => e.Id, id);
+            var entity = collection.FindOne(query);
+
+            if (entity == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.categoryId = new SelectList(db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>(), "Id", "name");
+            return View(entity);
+        }
+
+        //
+        // POST: /Admin/jjmcNewsCRUD/Edit/5
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Edit(Product edit)
+        {
+            if (ModelState.IsValid)
+            {
+                var collection = db.GetCollection<Product>("Product");
+                var query = Query<Product>.EQ(e => e.Id, edit.Id);
+                var entity = collection.FindOne(query);
+                if (query == null)
+                {
+                    return HttpNotFound();
+                }
+
+                //图片上传
+                string image_Path = string.Empty;
+                string _Path = "/Content/userfiles/Upload/";//设置上传路径
+                string date = Request.Form["date"];
+                edit.date = Convert.ToDateTime(date).AddHours(8);
+                HttpPostedFileBase image = Request.Files["thum"];
+                image_Path = Liu_FileV1.SaveFile(image, Server.MapPath(_Path), _Path);
+                if (!string.IsNullOrEmpty(image_Path))
+                {
+                    edit.thum = image_Path;
+                }
+
+                entity = edit;
+                collection.Save(entity);
+
+                return RedirectToAction("Index");
+            }
+            ViewBag.categoryId = new SelectList(db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>(), "Id", "name");
+            return View(edit);
+        }
+
+
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(string id)
+        {
+            var collection = db.GetCollection<Product>("Product");
+            var query = Query<Product>.EQ(e => e.Id, id);
+            var result = collection.Remove(query);
+            return RedirectToAction("Index");
+        }
+        // 批量删除
+        [HttpPost]
+        public ActionResult BatchDelete()
+        {
+
+            var collection = db.GetCollection<Product>("Product");
+            var query = collection.AsQueryable<Product>();
+            var result = query;
+
+            foreach (var item in result)
+            {
+                string deleteId = "delete_" + item.Id;
+                if (Request.Form[deleteId] == "on")
+                {
+                    //删除
+                    var del = Query<Product>.EQ(e => e.Id, item.Id);
+                    collection.Remove(del);
+                }
+            }
+
+            return RedirectToAction("index");
+
+        }
+
+        //搜索功能
+        public ActionResult Search()
+        {
+            string Keyword = Request.QueryString["Keyword"];
+
+            var productCategory = db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>().Where(i=>i.name == Keyword).FirstOrDefault();
+            string categoryId = "";
+            if (productCategory != null)
+            {
+                categoryId = productCategory.Id;
+            }
+
+            var collection = db.GetCollection<Product>("Product");
+            var query = collection.AsQueryable<Product>().Where(i => i.title1.Contains(Keyword) || i.title2.Contains(Keyword) || i.title3.Contains(Keyword) || i.content.Contains(Keyword));
+            var result1 = query.ToList();
+            var result2 = collection.AsQueryable<Product>().Where(i => i.categoryId == categoryId).ToList();
+            var result = result1.Union(result2);
+
+            int pageIndex = Request.QueryString["pageIndex"].QueryStringIntHelp();
+            int pageSize = 15; //设置每页显示条数
+            ViewBag.Pagination = new Pagination(pageIndex, pageSize, result.Count());
+
+            ViewBag.Category = db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>().ToDictionary(i => i.Id, i => i.name);
+            return View("Index", result.OrderByDescending(i => i.date).Skip(pageIndex * pageSize).Take(pageSize).ToList());
+
+        }
     }
 }

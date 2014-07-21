@@ -276,6 +276,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\bg01.jpg" />
+    <Content Include="Images\bg_login_01.jpg" />
+    <Content Include="Images\bg_login_02.jpg" />
     <Content Include="Images\details_01.jpg" />
     <Content Include="Images\dot.png" />
     <Content Include="Images\goods_01.jpg" />
@@ -446,6 +448,8 @@
     <Content Include="Areas\Admin\Views\Shared\_AdminPagination.cshtml" />
     <Content Include="Areas\Admin\Views\EncyclopediaManage\Create.cshtml" />
     <Content Include="Areas\Admin\Views\EncyclopediaManage\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductManage\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductManage\Edit.cshtml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />

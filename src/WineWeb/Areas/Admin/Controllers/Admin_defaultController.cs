@@ -6,11 +6,12 @@ using System.Web.Mvc;
 
 namespace WineWeb.Areas.Admin.Controllers
 {
+    [Authorize]
     public class Admin_defaultController : Controller
     {
         //
         // GET: /Admin/Admin_default/
-
+ 
         public ActionResult Index()
         {
             return View();
