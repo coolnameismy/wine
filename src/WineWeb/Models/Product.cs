@@ -57,7 +57,7 @@ namespace WineWeb.Models
         }
         public string Link
         {
-            get { return "Product/Details/" + this.Id; }
+            get { return "/Product/Details/" + this.Id; }
         }
     }
 }

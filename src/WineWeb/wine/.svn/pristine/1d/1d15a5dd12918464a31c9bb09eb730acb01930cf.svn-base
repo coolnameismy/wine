@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>葡萄酒</title>
 	<link rel="stylesheet" type="text/css" href="style/base.css" />
 	<link rel="stylesheet" type="text/css" href="style/index.css" />
-	<link rel="stylesheet" type="text/css" href="style/subpage.css" />
+	<link rel="stylesheet" type="text/css" href="style/list.css" />
 	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
 </head>
@@ -40,38 +40,35 @@
 	</div>
 </div>
 <!--main start-->
-<div class="histroy_main">
-	<div class="histroy_main_wrap">
-		<div class="sitenav"><a href="index.html">首页</a>&gt<a href="#" target="_blank">酒庄历史</a>&gt<span>夏梦酒庄</span></div>
-		<div class="histroy_box">
-			<h1><strong>酒庄历史</strong><span>L’Histoire</span><em></em></h1>
-			<p>自1850年起由 Raymond家族管理，約有160多年歷史。由當時約15公頃擴展至現時總面積約有180公頃(其中的150公頃採用有機種植)。<br /><br />是波爾多最大的有機葡萄莊園，也是法國具上百年歷史的著名莊園之一。<br /><br />是歐洲最重要的有機葡萄酒經營者。<br /><br />莊園的總年產量約100多萬瓶 (其中有出口世界各地，如美國、加拿大、俄羅斯、羅馬尼亞、日本、中國、香港等)<br />出售到法國本地，出口比例若為  80% : 20%。</p>
-		</div>
-	</div>
-</div>
-<div class="address_main">
-	<div class="address_main_wrap">
-		<div class="address_box">
-			<h1><strong>庄园位置</strong><span>La Situation</span><em></em></h1>
-			<p>位置：波爾多市中心東南面的Saint-Laurent-du-Bois<br /><br />處於基隆河(Garonne)和多爾涅河(Dordogne)之間而被這兩條<br />河環抱著故又稱之為“兩海之間”(Entre-Deux-Mers)地區。</p>
-		</div>
-	</div>
-</div>
-<div class="concept">
-	<h1><strong>管理理念</strong><br/><span>La Philosophie</span><em></em></h1>
-	<ul>
-		<li>致力生產能代表波爾多地區的葡萄酒</li>
-		<li>保持莊園在有機葡萄酒的領先地位</li>
-		<li>為消費者提供有質素的葡萄酒</li>
-		<li>作為波爾多最大的有機種植者，以保護生態環境為己任</li>
-	</ul>
-	<div class="concept_img"><img src="images/ico_01.jpg" /><img src="images/ico_02.jpg" /><img src="images/ico_03.jpg" /><img src="images/ico_04.jpg" /><img src="images/ico_05.jpg" /><img src="images/ico_06.jpg" /></div>
-</div>
-<div class="team_main">
-	<div class="team_main_wrap">
-		<div class="team_box">
-			<h1><strong>酒庄团队</strong><span>L’Equipe</span><em></em></h1>
-			<p>現由夏夢家族的第7代傳人主理<br />忠於傳統家族理念</p>
+<div class="main">
+	<div class="main_wrap">
+		<div class="sitenav"><a href="index.html">首页</a>&gt<span>合作伙伴</span></div>
+		<h1><strong>合作伙伴</strong><br /><span>Partners</span></h1>
+		<div class="partner_list">
+			<div class="partner_box">
+				<img src="images/partner_01.jpg" class="partner_img" />
+				<div class="partner_r">
+					<h2>夏梦庄园</h2>
+					<p>自1850年起由 Raymond家族管理，約有160多年歷史。由當時約15公頃擴展至現時總面積約有180公頃(其中的150公頃採用有機種植)。是波爾多最大的有機葡萄莊園，也是法國具上百年歷史的著名莊園之一。是歐洲最重要的有機葡萄酒經營者。</p>
+					<a href="histroy.html" target="_blank" class="more">了解更多</a>
+				</div>
+			</div>
+			<div class="partner_box">
+				<img src="images/partner_01.jpg" class="partner_img" />
+				<div class="partner_r">
+					<h2>夏梦庄园</h2>
+					<p>自1850年起由 Raymond家族管理，約有160多年歷史。由當時約15公頃擴展至現時總面積約有180公頃(其中的150公頃採用有機種植)。是波爾多最大的有機葡萄莊園，也是法國具上百年歷史的著名莊園之一。是歐洲最重要的有機葡萄酒經營者。</p>
+					<a href="histroy.html" target="_blank" class="more">了解更多</a>
+				</div>
+			</div>
+			<div class="partner_box">
+				<img src="images/partner_01.jpg" class="partner_img" />
+				<div class="partner_r">
+					<h2>夏梦庄园</h2>
+					<p>自1850年起由 Raymond家族管理，約有160多年歷史。由當時約15公頃擴展至現時總面積約有180公頃(其中的150公頃採用有機種植)。是波爾多最大的有機葡萄莊園，也是法國具上百年歷史的著名莊園之一。是歐洲最重要的有機葡萄酒經營者。</p>
+					<a href="histroy.html" target="_blank" class="more">了解更多</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
