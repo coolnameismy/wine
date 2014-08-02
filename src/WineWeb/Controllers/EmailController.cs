@@ -14,7 +14,7 @@ namespace WineWeb.Controllers
             return "123";
          }
         [HttpPost]
-        public void sendEmail()
+         public Message sendEmail()
         {
             Message message = new Message();
             var from = Request.Content.ReadAsFormDataAsync().Result;
@@ -32,7 +32,7 @@ namespace WineWeb.Controllers
             string phone = from["phone"];
             string email = from["email"];
             string content = from["content"];
-            send(name, company, address, tel, fax, phone, email, content);
+            return send(name, company, address, tel, fax, phone, email, content);
         }
         public Message send(string name, string company, string address, string tel, string fax, string phone, string email, string content)
         {
@@ -47,24 +47,27 @@ namespace WineWeb.Controllers
 
             try
             {
-                System.Net.Mail.MailAddress from = new System.Net.Mail.MailAddress("collegife@163.com", "collegife System Notification"); //填写电子邮件地址，和显示名称
+                string sendEmailFrom = System.Configuration.ConfigurationManager.AppSettings["sendEmailFrom"];
+                string sendEmailFromPWD = System.Configuration.ConfigurationManager.AppSettings["sendEmailFromPWD"];
+                string sendEmailTo = System.Configuration.ConfigurationManager.AppSettings["sendEmailTo"];
 
-                System.Net.Mail.MailAddress to = new System.Net.Mail.MailAddress("coolnameismy@hotmail.com", "coolnameismy"); //填写邮件的收件人地址和名称
+                System.Net.Mail.MailAddress from = new System.Net.Mail.MailAddress(sendEmailFrom, "夏梦庄园网站系统通知"); //填写电子邮件地址，和显示名称
+                System.Net.Mail.MailAddress to = new System.Net.Mail.MailAddress(sendEmailTo, "网站管理员"); //填写邮件的收件人地址和名称
                 //设置好发送地址，和接收地址，接收地址可以是多个
                 System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
                 mail.From = from;
                 mail.To.Add(to);
                 mail.Subject = "夏梦庄园web 网站用户反馈";
-                mail.Body = " <h1>留言内容:</h1></br> " +
+                mail.Body = " <h3>留言内容:</h3></br> " +
                               content + "</br> " +
-                            "<h1>用户信息</h1></br> " +
-                            "<h3>姓名：" + name + "</h3></br> " +
-                            "<h3>公司：" + company + "</h3></br> " +
-                            "<h3>地址：" + address + "</h3></br> " +
-                            "<h3>电话：" + tel + "</h3></br> " +
-                            "<h3>传真：" + fax + "</h3></br> " +
-                            "<h3>手机：" + phone + "</h3></br> " +
-                            "<h3>电子邮件：" + email + "</h3></br> " +
+                            "<h3>用户信息</h13></br> " +
+                            "<p>姓名：" + name + "</p></br> " +
+                            "<p>公司：" + company + "</p></br> " +
+                            "<p>地址：" + address + "</p></br> " +
+                            "<p>电话：" + tel + "</p></br> " +
+                            "<p>传真：" + fax + "</p></br> " +
+                            "<p>手机：" + phone + "</p></br> " +
+                            "<p>电子邮件：" + email + "</p></br> " +
                         
                              "</br><h5>To ensure delivery to your inbox, please add collegife@163.com to your address book. Please do not reply to this email, as we are unable to respond from this address.</h5>";
 
@@ -73,7 +76,7 @@ namespace WineWeb.Controllers
                 System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
                 client.Host = "smtp.163.com";
                 //填写服务器地址相关的用户名和密码信息
-                client.Credentials = new System.Net.NetworkCredential("collegife@163.com", "collegife123456");
+                client.Credentials = new System.Net.NetworkCredential(sendEmailFrom, sendEmailFromPWD);
                 //发送邮件
                 client.Send(mail);
             }
