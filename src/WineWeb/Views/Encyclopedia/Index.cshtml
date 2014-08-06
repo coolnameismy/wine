@@ -5,14 +5,14 @@
 }
 
 <div class="main_wrap">
-		<div class="sitenav"><a href="#" target="_blank">首页</a>&gt<span>酒事百科</span></div>
+		<div class="sitenav"><a href="/" @*target="_blank"*@>首页</a>&gt<span>酒事百科</span></div>
 		<h1><strong>酒事百科</strong><br /><span>Encyclopedia</span></h1>
 		<div class="mainlist">
             @foreach (var item in Model)
             {
                 <div class="listbox">
-				    <a href="@item.Link" target="_blank"><img src="@Url.Content(item.thum)"></a>
-				    <h3><a href="@item.Link" target="_blank">@item.title1</a></h3>
+				    <a href="@item.Link" @*target="_blank"*@><img src="@Url.Content(item.thum)"></a>
+				    <h3><a href="@item.Link" @*target="_blank"*@>@item.title1</a></h3>
 				    <p>@item.title2</p>
 				    <a href="@item.Link" class="more">&gt;&nbsp;&nbsp;阅读全文</a>
 			    </div>

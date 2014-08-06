@@ -1,28 +1,53 @@
-﻿<!--footer start-->
+﻿ 
+<!--footer start-->
 <div class="bottom">
-    <a href="#" target="_blank">
-        <div class="box">
-            <h2>夏梦庄园</h2>
-            <img src="~/images/pic_01.jpg" />
-        </div>
-    </a>
-    <a href="#" target="_blank">
-        <div class="box">
-            <h2>酒事百科</h2>
-            <img src="~/images/pic_02.jpg" />
-        </div>
-    </a>
-    <a href="#" target="_blank" class="last">
-        <div class="box">
-            <h2>品酒人生</h2>
-            <img src="~/images/pic_03.jpg" />
-        </div>
-    </a>
+	<div class="csrcode flexslider" id="focus_bigpic">
+		<ul class="slides">		
+		<li><a href="/wine/histroy.html">
+			<div class="box">
+				<h2>夏梦庄园</h2>
+				<img src="~/images/bottom_partner_01.jpg" />
+			</div>
+		</a></li>
+		<li><a href="/wine/histroy.html">
+			<div class="box">
+				<h2>亚历山大庄园</h2>
+				<img src="~/images/bottom_partner_02.jpg" />
+			</div>
+		</a></li>
+		<li><a href="/wine/histroy.html" class="last">
+			<div class="box">
+				<h2>查里 &bull; 凯宁庄园</h2>
+				<img src="~/images/bottom_partner_03.jpg" />
+			</div>
+		</a></li>
+		</ul>
+	</div>
+	<a href="/Encyclopedia">
+		<div class="box">
+			<h2>酒事百科</h2>
+			<img src="~/images/pic_02.jpg" />
+		</div>
+	</a>
+	<a href="#" class="last">
+		<div class="box">
+			<h2>品酒人生</h2>
+			<img src="~/images/pic_03.jpg" />
+		</div>
+	</a>
 </div>
 <div class="footer">
-    <p>CHÂTEAU DE LAGARDE IS A FAMILY OWNED VINEYARD SINCE 1850, IT IS CONSIDERED </p>
-    <p>AS THE LARGEST FAMILY OWNED ORGANIC </p>
-    <p>VINEYARD IN BORDEAUX. CHÂTEAU DE LAGARDE IS </p>
-    <p>ONE OF THE BEST RED WINES FROM CHÂTEAU DE LAGARDE.</p>
+	<p>FAJIUSHE, TRADING BY CROWN FAITH LIMITED.</p>
+	<p>Copyright &copy; 2014 All rights reserved. </p>
 </div>
 <!--footer end-->
+<script src="~/js/slider.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav: false,
+        controlNav: false,
+      });
+    });
+</script>

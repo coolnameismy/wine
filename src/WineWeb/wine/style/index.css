@@ -28,12 +28,13 @@
 
 
 .bottom{width: 1100px; margin: 40px auto; overflow: hidden;}
+.bottom .csrcode{position: relative;width: 352px; height: 190px; overflow: hidden; float: left; margin-right: 18px;}
 .bottom a{display:block; float: left; width: 350px; text-decoration: none; margin-right: 18px;}
 .bottom a:last-child{margin-right: 0;}
 .bottom a.last{margin-right: 0;}
 .box{width: 350px; border: solid 1px #cdcdcd; float: left; }
 .box h2{width:350px; height: 54px; font: normal 18px/44px "Microsoft Yahei"; text-align: center; color: #222; background: url(../images/title_bg.jpg) no-repeat;}
+.box img{display: block;}
 .bottom a:hover .box{border-color: #d6c57d;}
 .footer{width: 1100px; margin: 0 auto; text-align: center; padding-bottom: 40px;}
-.footer p{color: #d6c57d; line-height: 24px; text-align: center; font-family:"Times New Roman"; letter-spacing: 4px;}
-.footer p.copyright{color: #7e6b5a; font-family: "Arial"; margin-top: 20px; letter-spacing: 0;}
+.footer p{color: #7e6b5a; font-family: "Arial"; margin-top: 10px; letter-spacing: 0;}

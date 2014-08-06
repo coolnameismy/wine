@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>葡萄酒</title>
+	<link rel="stylesheet" type="text/css" href="style/base.css" />
+	<link rel="stylesheet" type="text/css" href="style/index.css" />
+	<link rel="stylesheet" type="text/css" href="style/subpage.css" />
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="header_wrap">
+		<div class="top"><span></span><a href="#" class="language">English</a></div>
+		<div class="header_box">
+			<div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+			<div class="nav">
+				<ul id="js_nav">
+					<li class="about"><a href="about.html">关于我们</a>
+						<div class="subnav">
+							<a href="ourstory2.html">品牌故事</a><a href="about.html">选酒理念</a>
+						</div>
+					</li>
+					<li class="baike"><a href="../Encyclopedia">酒事百科</a></li>
+					<li class="goods"><a href="goodsindex.html">推介产品</a>
+						<div class="subnav">
+							<a href="goodslist.html">红葡萄酒</a><a href="goodslist.html">白葡萄酒</a><a href="goodslist.html">气泡酒及其它</a>
+						</div>
+					</li>
+					<li class="history"><a href="partners.html">合作伙伴</a>
+						<!--<div class="subnav">
+							<a href="histroy.html">夏梦酒庄</a><a href="histroy.html">亚历山大酒庄</a><a href="histroy.html">查理 &bull; 凯宁酒庄</a>
+						</div>-->
+					</li>
+					<li class="contact"><a href="contact.html">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--main start-->
+<div class="main">
+	 <div class="main_wrap">
+		<div class="sitenav"><a href="index.html">首页</a>&gt<span>联系我们</span></div>
+		<h1><strong>联系我们</strong><br /><span>Contact</span></h1>
+		<form action="/api/email" method="post" id="sendEmailForm">
+		<div class="contact_box">
+			<p class="req">带<span class="red">*</span>的为必填项</p>
+			<dl>
+				<dt><span class="red">*</span>姓名：</dt>
+				<dd><input type="text" class="txt w205" name="name"/></dd>
+			</dl>
+			<dl>
+				<dt>公司：</dt>
+				<dd><input type="text" class="txt w205" name="company"/></dd>
+			</dl>
+			<dl>
+				<dt>地址：</dt>
+				<dd><input type="text" class="txt w405" name="address" /></dd>
+			</dl>
+			<dl>
+				<dt><span class="red">*</span>电话：</dt>
+				<dd><input type="text" class="txt w55" value="86" name="tel1"/><input type="text" class="txt w55"  name="tel2"/><input type="text" class="txt w135"  name="tel3"/><span class="tips">例如：86 21 51351234-212</span></dd>
+			</dl>
+			<dl>
+				<dt>传真：</dt>
+				<dd><input type="text" class="txt w55" value="86"  name="fax1"/><input type="text" class="txt w55" name="fax2"/><input type="text" class="txt w135" name="fax3"/><span class="tips">例如：86 21 51351234-212</span></dd>
+			</dl>
+			<dl>
+				<dt>手机：</dt>
+				<dd><input type="text" class="txt w245" name="phone" /></dd>
+			</dl>
+			<dl>
+				<dt><span class="red">*</span>电子邮件：</dt>
+				<dd><input type="text" class="txt w305" name="email"/></dd>
+			</dl>
+			<dl>
+				<dt><span class="red">*</span>留言内容：</dt>
+				<dd><textarea class="txt_msg" name="content"></textarea></dd>
+			</dl>
+			<a href="javascript:document.getElementById('sendEmailForm').submit()" class="btn_submit">提交留言</a>
+           <!-- <input type="submit" class="btn_submit" value="提交留言" />-->
+		</div>
+		</form>
+		</div>
+		<div class="sitenav"><a href="index.html">首页</a>&gt<span>联系我们</span></div>
+		<h1><strong>联系我们</strong><br /><span>Contact</span></h1>
+		<div class="contact_box">
+			<p class="req"><span class="red">*</span>为必填项</p>
+			<dl>
+				<dt><span class="red">*</span>姓名：</dt>
+				<dd><input type="text" class="txt w205" /></dd>
+			</dl>
+			<dl>
+				<dt>称谓：</dt>
+				<dd><input name="123" type="radio" value="123" checked>先生 <input name="456" type="radio" value="456">女士 <input name="789" type="radio" value="789">小姐</dd>
+			</dl>
+			<dl>
+				<dt>公司：</dt>
+				<dd><input type="text" class="txt w205" /></dd>
+			</dl>
+			<dl>
+				<dt>地址：</dt>
+				<dd><input type="text" class="txt w405" /></dd>
+			</dl>
+			<dl>
+				<dt><span class="red">*</span>电话：</dt>
+				<dd><input type="text" class="txt w55" value="" /><input type="text" class="txt w55" /><input type="text" class="txt w135" /><span class="tips">例如：86 21 51351234-212</span></dd>
+			</dl>
+			<dl>
+				<dt>传真：</dt>
+				<dd><input type="text" class="txt w55" value="" /><input type="text" class="txt w55" /><input type="text" class="txt w135" /><span class="tips">例如：86 21 51351234-212</span></dd>
+			</dl>
+			<dl>
+				<dt>手机：</dt>
+				<dd><input type="text" class="txt w245" /></dd>
+			</dl>
+			<dl>
+				<dt><span class="red">*</span>电子邮件：</dt>
+				<dd><input type="text" class="txt w305" /></dd>
+			</dl>
+			<dl>
+				<dt><span class="red">*</span>留言内容：</dt>
+				<dd><textarea class="txt_msg"></textarea></dd>
+			</dl>
+			<a href="#" class="btn_submit">提交留言</a>
+		</div>
+	</div>
+</div>
+<!--main end-->
+<!--footer start-->
+<div class="bottom">
+	<div class="csrcode flexslider" id="focus_bigpic">
+		<ul class="slides">		
+		<li><a href="histroy.html">
+			<div class="box">
+				<h2>夏梦庄园</h2>
+				<img src="images/bottom_partner_01.jpg" />
+			</div>
+		</a></li>
+		<li><a href="histroy.html">
+			<div class="box">
+				<h2>亚历山大庄园</h2>
+				<img src="images/bottom_partner_02.jpg" />
+			</div>
+		</a></li>
+		<li><a href="histroy.html" class="last">
+			<div class="box">
+				<h2>查里 &bull; 凯宁庄园</h2>
+				<img src="images/bottom_partner_03.jpg" />
+			</div>
+		</a></li>
+		</ul>
+	</div>
+	<a href="../Encyclopedia">
+		<div class="box">
+			<h2>酒事百科</h2>
+			<img src="images/pic_02.jpg" />
+		</div>
+	</a>
+	<a href="#" class="last">
+		<div class="box">
+			<h2>品酒人生</h2>
+			<img src="images/pic_03.jpg" />
+		</div>
+	</a>
+</div>
+<div class="footer">
+	<p>FAJIUSHE, TRADING BY CROWN FAITH LIMITED.</p>
+	<p>Copyright &copy; 2014 All rights reserved.</p>
+</div>
+<!--footer end-->
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav: false,
+        controlNav: false,
+      });
+    });
+</script>
+</body>
+</html>

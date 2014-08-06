@@ -88,3 +88,23 @@
 .team_box{width: 460px; margin-left: 58px; padding-top: 160px;}
 .team_box h1 span{  position: absolute; left: 160px; top: 24px; color: #a6927c; font: italic 36px/48px "Times New Roman";}
 .team_box h1 em{display: block; width: 352px; border-bottom: solid 1px #ccc; position: absolute; left: 80px; top: 62px;*top:44px;}
+
+/*--Contact css--*/
+.contact_box{width: 580px; border: solid 1px #ddd; box-shadow: 0 0 6px #afafaf; margin: 40px auto; padding: 0 50px;}
+.contact_box .req{ color: #a6927c; margin: 18px 0 28px 0;}
+.contact_box span.red{color: #f00;}
+.contact_box dl{width: 580px; overflow: hidden; margin-bottom: 16px;}
+.contact_box dl dt{width: 88px; color: #000; float: left; font-size: 14px; line-height: 24px; padding-left: 14px; position: relative;}
+.contact_box dl dd{float: left;}
+.contact_box dl dd .txt{ height: 20px; line-height: 20px; margin-right: 8px;}
+.w205{width: 205px;}
+.w405{width: 405px;}
+.w55{width: 55px;}
+.w135{width: 135px;}
+.w245{width: 245px;}
+.w305{width: 305px;}
+.contact_box dl dd .tips{display: block; color: #9a9a9a; line-height: 20px;}
+.contact_box dl dd .txt_msg{ width: 405px; height: 198px;}
+.contact_box dl dt span.red{position: absolute; left: 0px; font-size: 12px; z-index: 99;}
+.contact_box a.btn_submit{ display: block; width: 100px; margin: 20px auto; height: 40px; background: #bd985d; border: solid 1px #b38c4f; color: #fff; text-align: center; line-height: 40px; font-size: 14px; border-radius: 2px;}
+.contact_box a.btn_submit:hover{background: #fff; color:#bd985d; text-decoration: none; }

@@ -12,9 +12,9 @@
 .mainlist{width: 920px; margin: 60px auto; overflow: hidden;}
 .listbox{width: 420px; margin: 20px; float: left;}
 .listbox img{width: 420px; height: 230px;}
-.listbox h3{ font: bold 24px/1.5 Arial; color: #a78a6a; margin: 10px 0;}
+.listbox h3{ font: bold 24px/1.5 Arial; color: #a78a6a; margin: 10px 0; width: 420px; overflow: hidden; white-space: nowrap;  text-overflow:ellipsis;}
 .listbox h3 a{font: bold 24px/1.5 Arial; color: #a78a6a;}
-.listbox p{color: #000; padding-bottom: 16px; border-bottom: solid 1px #ccc;margin-bottom: 10px;}
+.listbox p{color: #000; height: 56px; overflow: hidden;  border-bottom: solid 1px #ccc;margin-bottom: 10px;}
 .listbox .more{color: #a78a6a;font: bold 12px/1.5 Arial;}
 
 .pager{text-align: center;}

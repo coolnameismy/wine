@@ -38,7 +38,28 @@ namespace WineWeb.Controllers
         public ActionResult Details(string id)
         {
             MongoDatabase db = Common.GetDatabase();
-            var encyclopedia = db.GetCollection<Encyclopedia>("Encyclopedia").AsQueryable<Encyclopedia>().Where(i => i.Id == id).FirstOrDefault();
+            var dataSet = db.GetCollection<Encyclopedia>("Encyclopedia").AsQueryable<Encyclopedia>().OrderByDescending(i => i.date);
+            Encyclopedia encyclopedia = null;
+            int index = 0;
+            foreach (var item in dataSet)
+            {
+                if (item.Id == id)
+                {
+                    encyclopedia = item;
+                    break;
+                }
+                index++;
+            }
+
+            //上一篇下一篇
+            if (index != 0)
+            {
+                ViewBag.pre = dataSet.ElementAtOrDefault(index - 1);
+            }
+            if ((index + 1) != dataSet.Count())
+            {
+                ViewBag.next = dataSet.ElementAtOrDefault(index + 1);
+            }
             return View(encyclopedia);
         }
 
