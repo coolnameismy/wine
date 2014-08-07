@@ -68,8 +68,8 @@ namespace WineWeb.Controllers
                             "<p>传真：" + fax + "</p></br> " +
                             "<p>手机：" + phone + "</p></br> " +
                             "<p>电子邮件：" + email + "</p></br> " +
-                        
-                             "</br><h5>To ensure delivery to your inbox, please add collegife@163.com to your address book. Please do not reply to this email, as we are unable to respond from this address.</h5>";
+
+                             "</br><h5>To ensure delivery to your inbox, please add " + sendEmailFrom + " to your address book. Please do not reply to this email, as we are unable to respond from this address.</h5>";
 
                 mail.IsBodyHtml = true;//设置显示htmls
                 //设置好发送邮件服务地址

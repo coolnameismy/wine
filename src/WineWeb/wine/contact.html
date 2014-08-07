@@ -46,7 +46,7 @@
             <div class="sitenav"><a href="index.html">首页</a>&gt<span>联系我们</span></div>
             <h1><strong>联系我们</strong><br />
                 <span>Contact</span></h1>
-            <form action="/api/email" method="post" id="sendEmailForm">
+            <form action="/EmailReceive/index" method="post" id="sendEmailForm">
                 <div class="contact_box">
                     <p class="req"><span class="red">*</span>为必填项</p>
                     <dl>
@@ -57,9 +57,9 @@
                     
                     <dl>
                         <dt>称谓：</dt>
-                        <dd><input name="" type="radio" value="" checked>先生</dd>
-                        <dd><input name="" type="radio" value="" >女士</dd>
-                        <dd><input name="" type="radio" value="" >小姐</dd>
+                        <dd><input name="gender" type="radio"  value="先生" checked>先生</dd>
+                        <dd><input name="gender" type="radio" value="女士" >女士</dd>
+                        <dd><input name="gender" type="radio" value="小姐" >小姐</dd>
                     </dl>
                     
                     <dl>
