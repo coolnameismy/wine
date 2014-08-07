@@ -1,14 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>葡萄酒</title>
 	<link rel="stylesheet" type="text/css" href="style/base.css" />
 	<link rel="stylesheet" type="text/css" href="style/index.css" />
-	<link rel="stylesheet" type="text/css" href="style/jslides.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="style/subpage.css" />
 	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
-	<script type="text/javascript" src="js/jquery.jslides.js"></script>
 </head>
 <body>
 <div class="header">
@@ -24,14 +23,14 @@
 						</div>
 					</li>
 					<li class="baike"><a href="../Encyclopedia">酒事百科</a></li>
-					<li class="goods"><a href="goodsindex.html">推介产品</a>
+					<li class="goods"><a href="/Product">推介产品</a>
 						<div class="subnav">
-							<a href="goodslist.html">红葡萄酒</a><a href="goodslist.html">白葡萄酒</a><a href="goodslist.html">气泡酒及其它</a>
+							<a href="/Product/List/1">红葡萄酒</a><a href="/Product/List/2">白葡萄酒</a><a href="/Product/List/3">气泡酒及其它</a>
 						</div>
 					</li>
 					<li class="history"><a href="partners.html">合作伙伴</a>
 						<!--<div class="subnav">
-							<a href="history.html">夏梦酒庄</a><a href="history.html">亚历山大酒庄</a><a href="history.html">查理 &bull; 凯宁酒庄</a>
+							<a href="history.html">夏梦酒庄</a>
 						</div>-->
 					</li>
 					<li class="contact"><a href="contact.html">联系我们</a></li>
@@ -40,15 +39,19 @@
 		</div>
 	</div>
 </div>
-<!--slider start-->
-<div id="full-screen-slider">
-	<ul id="slides">
-		<li style="background:url('images/img_01.jpg') no-repeat center top"><a href="history.html"></a></li>
-		<li style="background:url('images/img_02.jpg') no-repeat center top"><a href="ourstory2.html"></a></li>
-		<li style="background:url('images/img_03.jpg') no-repeat center top"><a href="about.html"></a></li>
-	</ul>
+<!--main start-->
+<div class="main">
+	<div class="main_wrap">
+		<div class="sitenav"><a href="index.html">首页</a>&gt<span>联系我们</span></div>
+		<h1><strong>联系我们</strong><br /><span>Contact</span></h1>
+
+		<div class="contact_box">
+<p align="center" style="font-size:18px; font-family:微软雅黑, Arial, Helvetica, sans-serif; margin:50px 0;"><img src="images/success.gif" align="absmiddle">留言提交成功，感谢您的支持！</p>
+		</div>
+
+	</div>
 </div>
-<!--slider end-->
+<!--main end-->
 <!--footer start-->
 <div class="bottom">
 	<div class="csrcode flexslider" id="focus_bigpic">
@@ -59,13 +62,13 @@
 				<img src="images/bottom_partner_01.jpg" />
 			</div>
 		</a></li>
-		<li><a href="history.html">
+		<li><a href="history_02.html">
 			<div class="box">
 				<h2>亚历山大庄园</h2>
 				<img src="images/bottom_partner_02.jpg" />
 			</div>
 		</a></li>
-		<li><a href="history.html" class="last">
+		<li><a href="history_03.html" class="last">
 			<div class="box">
 				<h2>查里 &bull; 凯宁庄园</h2>
 				<img src="images/bottom_partner_03.jpg" />
@@ -88,7 +91,7 @@
 </div>
 <div class="footer">
 	<p>FAJIUSHE, TRADING BY CROWN FAITH LIMITED.</p>
-	<p>Copyright &copy; 2014 All rights reserved.</p>
+	<p>Copyright &copy; 2014 All rights reserved. </p>
 </div>
 <!--footer end-->
 <script type="text/javascript" src="js/slider.js"></script>
