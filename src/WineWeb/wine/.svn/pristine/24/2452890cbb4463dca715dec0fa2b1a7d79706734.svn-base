@@ -9,7 +9,7 @@
         <meta name="description" content="法酒舍、葡萄酒、酒庄、庄园、法国、酿制">
 	<link rel="stylesheet" type="text/css" href="style/base.css" />
 	<link rel="stylesheet" type="text/css" href="style/index.css" />
-	<link rel="stylesheet" type="text/css" href="style/subpage.css" />
+	<link rel="stylesheet" type="text/css" href="style/list.css" />
 	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
 </head>
@@ -23,7 +23,7 @@
 				<ul id="js_nav">
 					<li class="about"><a href="about_home.html">关于我们</a>
 						<div class="subnav">
-							<a href="ourstory2.html">品牌故事</a><a href="about.html">選酒理念</a>
+							<a href="ourstory2.html">品牌故事</a><a href="about.html">选酒理念</a>
 						</div>
 					</li>
 					<li class="baike"><a href="../Encyclopedia">酒事百科</a></li>
@@ -34,7 +34,7 @@
 					</li>
 					<li class="history"><a href="partners.html">合作伙伴</a>
 						<!--<div class="subnav">
-							<a href="history.html">夏梦酒庄</a>
+							<a href="history.html">夏梦酒庄</a><a href="history.html">亚历山大酒庄</a><a href="history.html">查里 &bull; 凯宁酒庄</a>
 						</div>-->
 					</li>
 					<li class="contact"><a href="contact.html">联系我们</a></li>
@@ -44,14 +44,28 @@
 	</div>
 </div>
 <!--main start-->
-<div class="main main_history_03">
+<div class="main">
 	<div class="main_wrap">
-		<div class="sitenav"><a href="index.html">首页</a>&gt<a href="partners.html">合作伙伴</a>&gt<span>亚历山大庄园</span></div>
-		<div class="content">
-			<div class="history_con_03"><h3>Alexandre庄园</h3>
-            <p>已拥有5代相传的酿酒经验和技术，虽然经验丰厚但一直保持作风低调不愿参与出席任何能获奖的活动与机会，只顾为种植和酿制工序上谨守冈位。坚持沿用传统波尔多酿酒工艺配以酒庄出类葡萄种植技术，此酒庄所出品的均是很有质素的葡萄酒。</p><br />
-            <p>庄园内的葡萄株龄为25 至 35年不等。庄园内以种植卡本妮肃伟昂(Carbernet Sauvignon)、卡本妮佛藩克(Carbernet Franc)、梅洛(Merlot)、赛米蓉(Sémillon)和肃伟昂(Sauvignon)五大葡萄品种为主。</p><br />
-            <p>系列包括AOC波尔多级别的红葡萄酒和白葡萄酒及法国南部风格的IGP红葡萄酒。</p><br /></div>
+		<div class="sitenav"><a href="index.html">首页</a>&gt<span>关于我们</span></div>
+		<h1><strong>关于我们</strong><br /><span>About Us</span></h1>
+		<div class="partner_list">
+			<div class="partner_box">
+				<img src="images/about_01.jpg" class="partner_img" />
+				<div class="partner_r">
+					<h2>品牌故事</h2>
+					<p>亨丰团队创办法酒舍葡萄酒网站。我们认为选择一款适合自己的酒，如同选择一个爱人，会令人感到无比的愉悦和幸福。</p>
+					<a href="ourstory2.html" class="more">了解更多</a>
+				</div>
+			</div>
+			<div class="partner_box">
+				<img src="images/about_02.jpg" class="partner_img" />
+				<div class="partner_r">
+					<h2>选酒理念</h2>
+					<p>亨丰为一家主力于法国葡萄酒及其他酒类的进口商，管理团队对葡萄酒文化认识深厚，尤喜欢挑选优质有潜力的酒庄为合作对象。</p>
+					<a href="about.html" class="more">了解更多</a>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
