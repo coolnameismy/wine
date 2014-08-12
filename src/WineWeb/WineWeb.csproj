@@ -319,8 +319,10 @@
     <Content Include="Images\subtitle.png" />
     <Content Include="Images\title_bg.jpg" />
     <Content Include="js\common.js" />
+    <Content Include="js\csrcode.js" />
     <Content Include="js\jquery-1.8.0.min.js" />
     <Content Include="js\jquery.jslides.js" />
+    <Content Include="js\slider.js" />
     <Content Include="Scripts\Admin.js" />
     <Content Include="Scripts\jjmcAdmin.js" />
     <Content Include="style\base.css" />
