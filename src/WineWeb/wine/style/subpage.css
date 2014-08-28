@@ -58,17 +58,20 @@
 .histroy_box{ width: 494px; margin-top: 300px;}
 .histroy_box h1,
 .address_box h1,
-.team_box h1{position: relative; height: 96px;}
+.team_box h1,
+.plants_box h1{position: relative; height: 96px;}
 .histroy_box h1 strong,
 .address_box h1 strong,
-.team_box h1 strong{font-weight:600;font-size: 40px;line-height: 48px; color: #000;}
+.team_box h1 strong,
+.plants_box h1 strong{font-weight:600;font-size: 40px;line-height: 48px; color: #000;}
 .histroy_box h1 span{  position: absolute; left: 160px; top: 24px; color: #a6927c; font: italic 36px/48px "Times New Roman";}
 .histroy_box h1 em{display: block; width: 352px; border-bottom: solid 1px #ccc; position: absolute; left: 80px; top: 62px;*top:44px;}
 .histroy_box p,
 .address_box p,
-.team_box p{font: normal 16px/24px simsun; color: #464646;}
+.team_box p,
+.plants_box p{font: normal 16px/24px simsun; color: #464646;}
 
-.address_main{width: 100%; margin: 40px 0; background: url(../images/histroy_bg_02.jpg) no-repeat center top;}
+.address_main{width: 100%; margin-bottom: 40px; background: url(../images/histroy_bg_02.jpg) no-repeat center top;}
 .address_main_wrap{width: 1100px; height: 320px; margin: 0 auto;}
 .address_box{ width: 460px; margin-left:596px; padding-top: 50px;}
 .address_box h1 strong{color: #fff;}
@@ -90,6 +93,13 @@
 .team_box{width: 460px; margin-left: 58px; padding-top: 160px;}
 .team_box h1 span{  position: absolute; left: 160px; top: 24px; color: #a6927c; font: italic 36px/48px "Times New Roman";}
 .team_box h1 em{display: block; width: 352px; border-bottom: solid 1px #ccc; position: absolute; left: 80px; top: 62px;*top:44px;}
+
+.plants_main{width: 100%;background: url(../images/histroy_bg_04.jpg) no-repeat center top;}
+.plants_main_wrap{width: 1100px; height: 538px; margin: 0 auto;}
+.plants_box{width: 490px; margin-left: 550px; padding-top: 100px;}
+.plants_box h1 span{  position: absolute; left: 160px; top: 24px; color: #a6927c; font: italic 36px/48px "Times New Roman";}
+.plants_box h1 em{display: block; width: 352px; border-bottom: solid 1px #ccc; position: absolute; left: 80px; top: 62px;*top:44px;}
+
 
 /*--Contact css--*/
 .contact_box{width: 580px; border: solid 1px #ddd; box-shadow: 0 0 6px #afafaf; margin: 40px auto; padding: 0 50px;}

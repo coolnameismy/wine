@@ -39,6 +39,7 @@
 .goodsbox img{width: 182px; height: 330px;}
 .goodsbox h5{font: normal 20px/32px Arial; color: #000; text-align: center; height: 64px; overflow: hidden;}
 .goodsbox p{ color: #7c7c7c; line-height: 18px; padding: 30px 0; border-bottom: solid 1px #aeaca9; text-align: left; margin-bottom: 16px;}
+.goodsbox p span{ display: block; height: 54px; overflow: hidden;}
 .goodsbox .more{color: #a78a6a;font: bold 12px/1.5 Arial;}
 
 /*--Partners css--*/
