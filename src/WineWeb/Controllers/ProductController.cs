@@ -50,7 +50,7 @@ namespace WineWeb.Controllers
             var category = db.GetCollection<ProductCategory>("ProductCategory").AsQueryable<ProductCategory>().ToList();
             var product = db.GetCollection<Product>("Product").AsQueryable<Product>().Where(i=>i.Id==id).FirstOrDefault();
             //分类名称
-            ViewBag.CategoryName = category.FirstOrDefault(i => i.Id == product.categoryId).name;
+            ViewBag.Category = category.FirstOrDefault(i => i.Id == product.categoryId);
             return View(product);
         }
     }
