@@ -7,7 +7,7 @@
 .sitenav span{ font-size:14px; margin-left: 4px; }
 .main_wrap h1{text-align: center; line-height: 48px; font-size: 40px;}
 .main_wrap h1 strong{font-weight:600; color: #000;}
-.main_wrap h1 span{ color: #949494; font-weight: normal; font-family: "Times New Roman";}
+.main_wrap h1 span{ color: #949494; font-weight: normal; font-family: "Times New Roman"; font-size: 32px;}
 
 .mainlist{width: 920px; margin: 60px auto; overflow: hidden;}
 .listbox{width: 420px; margin: 20px; float: left;}
@@ -39,6 +39,7 @@
 .goodsbox img{width: 182px; height: 330px;}
 .goodsbox h5{font: normal 20px/32px Arial; color: #000; text-align: center; height: 64px; overflow: hidden;}
 .goodsbox p{ color: #7c7c7c; line-height: 18px; padding: 30px 0; border-bottom: solid 1px #aeaca9; text-align: left; margin-bottom: 16px;}
+.goodsbox p span{ display: block; height: 54px; overflow: hidden;}
 .goodsbox .more{color: #a78a6a;font: bold 12px/1.5 Arial;}
 
 /*--Partners css--*/

@@ -7,7 +7,7 @@
   
  
 	<div class="main_wrap">
-		<div class="sitenav"><a href="index.html">首页</a>&gt<a href="#" target="_blank">推介产品</a>&gt<span>@ViewBag.CategoryName</span></div>
+		<div class="sitenav"><a href="/wine/index.html">首页</a>&gt<a href="/Product">推介产品</a>&gt<span>@ViewBag.CategoryName</span></div>
 		<h1><strong>推介产品</strong><br /><span>Recommendation</span></h1>
 		<div class="goodslist">
 			<div class="goods_wrap">
@@ -17,7 +17,7 @@
                     	<div class="goodsbox">
 					        <a href="@item.Link" target="_blank"><img src="@Url.Content(item.thum)" title="红葡萄酒" /></a>
 					        <h5><span>@item.title1</span><br/><span>@item.title2</span></h5>
-					        <p>@item.ViewTitle3</p>
+					        <p><span>@item.ViewTitle3</span></p>
 					        <a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
 				        </div>
                 }

@@ -13,7 +13,7 @@
 }*@
 
 	<div class="main_wrap">
-		<div class="sitenav"><a href="index.html">首页</a>&gt<span>推介产品</span></div>
+		<div class="sitenav"><a href="/wine/index.html">首页</a>&gt<span>推介产品</span></div>
 		<h1><strong>推介产品</strong><br /><span>Recommendation</span></h1>
 		<div class="goodslist">
 
@@ -27,14 +27,14 @@
 				        <h4><span>@dic[group.Key]</span></h4>
                             
                         }
-				        <div class="subtitle"><strong>推荐</strong><a href="Product/List/@group.Key" target="_blank">查看更多&nbsp;&nbsp;&gt;&gt;</a></div>
+				        <div class="subtitle"><strong>推荐</strong><a href="Product/List/@group.Key">查看更多&nbsp;&nbsp;&gt;&gt;</a></div>
                         @foreach(var item in group.OrderByDescending(i=>i.date).Take(5))
                         {
                              <div class="goodsbox">
 					            <a href="@item.Link" target="_blank"><img src="@Url.Content(item.thum)" title="红葡萄酒" /></a>
 					            <h5><span>@item.title1</span><br/><span>@item.title2</span></h5>
-					            <p>@item.ViewTitle3</p>
-					            <a href="@item.Link" target="_self" class="more">&gt;&nbsp;了解详情</a>
+					            <p><span>@item.ViewTitle3</span></p>
+					            <a href="@item.Link" target="_blank" class="more">&gt;&nbsp;了解详情</a>
 				            </div>
                         }
  
