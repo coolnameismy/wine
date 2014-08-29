@@ -1,0 +1,53 @@
+@hcarset "utf-8";
+
+.main{width: 100%; background: url(../images/bg01.jpg) repeat-x left top;}
+.main_wrap{width: 1100px; margin: 0 auto; background: url(../images/main_bg.jpg) no-repeat;}
+.sitenav{text-align: right; color: #000; font-size: 14px; padding: 30px 0;}
+.sitenav a{ font-size: 14px; color: #9f9f9f; margin:0 4px;}
+.sitenav span{ font-size:14px; margin-left: 4px; }
+.main_wrap h1{text-align: center; line-height: 48px; font-size: 40px;}
+.main_wrap h1 strong{font-weight:600; color: #000;}
+.main_wrap h1 span{ color: #949494; font-weight: normal; font-family: "Times New Roman"; font-size: 32px;}
+
+.mainlist{width: 920px; margin: 60px auto; overflow: hidden;}
+.listbox{width: 420px; margin: 20px; float: left;}
+.listbox img{width: 420px; height: 230px;}
+.listbox h3{ font: bold 24px/1.5 Arial; color: #a78a6a; margin: 10px 0; width: 420px; overflow: hidden; white-space: nowrap;  text-overflow:ellipsis;}
+.listbox h3 a{font: bold 24px/1.5 Arial; color: #a78a6a;}
+.listbox p{color: #000; height: 56px; overflow: hidden;  border-bottom: solid 1px #ccc;margin-bottom: 10px;}
+.listbox .more{color: #a78a6a;font: bold 12px/1.5 Arial;}
+
+.pager{text-align: center;}
+.pager a{display: inline-block; vertical-align: middle; width: 24px; height: 36px; text-align: center; font: bold 14px/36px "Microsoft Yahei"; color: #898989; border:solid 1px #ccc; text-decoration: none; margin: 0 2px;}
+.pager a:hover,
+.pager a.cur{color: #e60011;}
+.pager a em{display: inline-block; width: 0; height: 0; border-width: 5px; position: relative;overflow:hidden;vertical-align:middle; *top:8px;}
+.pager .page_prev{ border-style:  dashed solid dashed dashed; border-color:transparent #a6927c transparent transparent; right: 3px;}
+.pager .page_next{ border-style:  dashed dashed dashed solid; border-color:transparent transparent transparent #a6927c; left: 3px;}
+
+.goodslist{width: 1100px; margin: 30px auto;}
+.goods_wrap h4{border-bottom: solid 1px #a78a6a; text-align: center; margin: 30px 0;}
+.goods_wrap h4 span{font:bold 24px/24px Arial; color: #a78a6a; position: relative; top: 12px; background-color: #fff; padding: 0 8px;}
+.goods_wrap h4 span.oth{background-color: #f7f6f4;}
+.goods_wrap{width: 1100px; overflow: hidden; padding-bottom: 30px;}
+.wrap_bg{background-image: -moz-linear-gradient(top , #fff, #f0ebe6);background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, from(#fff), to(#f0ebe6));background-image: linear-gradient(top , #fff, #f0ebe6);filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#ffffff', endColorStr='#f0ebe6', gradientType='0')\9;}
+.subtitle{width: 1100px; overflow: hidden; margin: 20px 0;}
+.subtitle strong{display: inline-block; float: left; width: 88px; height: 42px; background: url(../images/subtitle.png) no-repeat; font: bold 18px/42px "Microsoft Yahei"; color: #fff; text-indent: 16px;}
+.subtitle a{ display: inline-block; float: right; width: 94px; height: 32px; background-color: #c0af94; text-align: center; font: bold 12px/32px Arial; color: #fff; text-decoration: none;border-radius: 5px;}
+.subtitle a:hover{background-color: #998b74;}
+.goodsbox{width: 182px; float: left; text-align: center; margin: 19px;}
+.goodsbox img{width: 182px; height: 330px;}
+.goodsbox h5{font: normal 20px/32px Arial; color: #000; text-align: center; height: 64px; overflow: hidden;}
+.goodsbox p{ color: #7c7c7c; line-height: 18px; padding: 30px 0; border-bottom: solid 1px #aeaca9; text-align: left; margin-bottom: 16px;}
+.goodsbox p span{ display: block; height: 54px; overflow: hidden;}
+.goodsbox .more{color: #a78a6a;font: bold 12px/1.5 Arial;}
+
+/*--Partners css--*/
+.partner_list{width: 1000px; margin: 40px auto;}
+.partner_box{ width: 880px; height: 190px; border: solid 1px #ddd; box-shadow: 0 0 6px #afafaf; margin: 0px auto 20px auto; padding: 25px 0;}
+.partner_box .partner_img{width: 280px; height: 190px; float: left; margin:0 25px 0 10px; }
+.partner_box .partner_r{float: left; width: 514px;}
+.partner_box .partner_r h2{ font: normal 24px/1.5 "Microsoft Yahei"; color: #59493f;}
+.partner_box .partner_r p{ font: normal 14px/22px "Arial"; color: #464646; margin: 10px 0;}
+.partner_box .partner_r .more{ display: block; width: 100px; height: 40px; background: #bd985d; border: solid 1px #b38c4f; color: #fff; text-align: center; line-height: 40px; font-size: 14px; border-radius: 2px;}
+.partner_box .partner_r .more:hover{background: #fff; color:#bd985d; text-decoration: none; }

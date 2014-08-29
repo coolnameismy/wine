@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>葡萄酒</title>
+	<link rel="stylesheet" type="text/css" href="style/base.css" />
+	<link rel="stylesheet" type="text/css" href="style/index.css" />
+	<link rel="stylesheet" type="text/css" href="style/subpage.css" />
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="header_wrap">
+		<div class="top"><span></span><a href="#" class="language">English</a></div>
+		<div class="header_box">
+			<div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+			<div class="nav">
+				<ul id="js_nav">
+					<li class="about"><a href="about.html">关于我们</a>
+						<div class="subnav">
+							<a href="ourstory2.html">品牌故事</a><a href="about.html">选酒理念</a>
+						</div>
+					</li>
+					<li class="baike"><a href="../Encyclopedia">酒事百科</a></li>
+			    	<li class="goods"><a href="/Product">推介产品</a>
+						<div class="subnav">
+							<a href="/Product/List/1">红葡萄酒</a><a href="/Product/List/2">白葡萄酒</a><a href="/Product/List/3">气泡酒及其它</a>
+						</div>
+					</li>
+					<li class="history"><a href="partners.html">合作伙伴</a>
+						<!--<div class="subnav">
+							<a href="history.html">夏梦酒庄</a><a href="history.html">亚历山大酒庄</a><a href="history.html">查理 &bull; 凯宁酒庄</a>
+						</div>-->
+					</li>
+					<li class="contact"><a href="contact.html">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--main start-->
+<div class="main">
+	<div class="main_wrap">
+		<div class="sitenav"><a href="index.html">首页</a>&gt<span>酒事百科</span></div>
+		<h1><strong>文章标题</strong><br /><span>English Title</span></h1>
+		<div class="content">
+			<div class="con_box">
+				<p>亨丰为一家主力于法国葡萄酒及其他酒类的进口商，管理团队对葡萄酒文化认识深厚，尤喜欢挑选优质有潜力的酒庄为合作对象。</p><br /><p>在欧洲国家，葡萄酒是一种进餐时的高雅点缀，讲究不同风格葡萄酒和食物的配搭，并不光追求天价超级名酒。其实，只要懂得欣赏不同产地的特性(Terrior)就能轻而易举地挑选出物有所值的优秀葡萄酒!</p><br /><p>优质和高性价比的洋酒，也随时乐意提供为客户进货意见。</p><br />
+				<img src="images/details_01.jpg" width="620px" height="320px" /><br />
+				<p>亨丰为一家主力于法国葡萄酒及其他酒类的进口商，管理团队对葡萄酒文化认识深厚，尤喜欢挑选优质有潜力的酒庄为合作对象。</p><br /><p>在欧洲国家，葡萄酒是一种进餐时的高雅点缀，讲究不同风格葡萄酒和食物的配搭，并不光追求天价超级名酒。其实，只要懂得欣赏不同产地的特性(Terrior)就能轻而易举地挑选出物有所值的优秀葡萄酒!</p><br /><p>优质和高性价比的洋酒，也随时乐意提供为客户进货意见。</p><br />
+			</div>
+			<div class="other">
+				<div class="print"><a href="#">打印此页</a></div>
+				<span>|</span>
+				<div class="share">
+					<!--Baidu share start-->
+					<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+					<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+					<!--Baidu share end-->
+				</div>
+			</div>
+		</div>
+		<div class="articlenav">
+			<span class="art_prev">&lt;&nbsp;上一篇：<a href="#" target="_blank">随时乐意提供为客户进货意见</a></span>
+			<span class="art_next">下一篇：<a href="#" target="_blank">葡萄酒是一种进餐时的高雅点缀</a>&nbsp;&gt;</span>
+		</div>
+	</div>
+</div>
+<!--main end-->
+<!--footer start-->
+<div class="bottom">
+	<div class="csrcode flexslider" id="focus_bigpic">
+		<ul class="slides">		
+		<li><a href="history.html">
+			<div class="box">
+				<h2>夏梦庄园</h2>
+				<img src="images/bottom_partner_01.jpg" />
+			</div>
+		</a></li>
+		<li><a href="history.html">
+			<div class="box">
+				<h2>亚历山大庄园</h2>
+				<img src="images/bottom_partner_02.jpg" />
+			</div>
+		</a></li>
+		<li><a href="history.html" class="last">
+			<div class="box">
+				<h2>查里 &bull; 凯宁庄园</h2>
+				<img src="images/bottom_partner_03.jpg" />
+			</div>
+		</a></li>
+		</ul>
+	</div>
+	<a href="../Encyclopedia">
+		<div class="box">
+			<h2>酒事百科</h2>
+			<img src="images/pic_02.jpg" />
+		</div>
+	</a>
+	<a href="#" class="last">
+		<div class="box">
+			<h2>品酒人生</h2>
+			<img src="images/pic_03.jpg" />
+		</div>
+	</a>
+</div>
+<div class="footer">
+	<p>FAJIUSHE, TRADING BY CROWN FAITH LIMITED.</p>
+	<p>Copyright &copy; 2014 All rights reserved. </p>
+</div>
+<!--footer end-->
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav: false,
+        controlNav: false,
+      });
+    });
+</script>
+     <script type="text/javascript">
+         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb66a027a506247fc6469d63c6ac3711c' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

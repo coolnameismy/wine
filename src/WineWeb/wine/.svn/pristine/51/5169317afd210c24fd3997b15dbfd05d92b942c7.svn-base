@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>法酒舍 | 专注葡萄酒文化，分享经典好酒</title>
+<meta name="title" content="法酒舍|葡萄酒|酒庄|庄园|法国|酿制">
+		<meta name="keywords" content="法酒舍，葡萄酒进口商。进的不一定是列级酒庄酒，但一定挑选优质酒庄酒。今年重点推介有西图男爵、拉哥杰古堡、查里.凯宁香槟等获奖洋酒。法酒舍,葡萄酒,酒庄,庄园,法国,酿制">
+		
+        <meta name="description" content="法酒舍、葡萄酒、酒庄、庄园、法国、酿制">
+	<link rel="stylesheet" type="text/css" href="style/base.css" />
+	<link rel="stylesheet" type="text/css" href="style/index.css" />
+	<link rel="stylesheet" type="text/css" href="style/subpage.css" />
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="header_wrap">
+		<div class="top"><span></span><a href="#" class="language">English</a></div>
+		<div class="header_box">
+			<div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+			<div class="nav">
+				<ul id="js_nav">
+					<li class="about"><a href="about_home.html">关于我们</a>
+						<div class="subnav">
+							<a href="ourstory2.html">品牌故事</a><a href="about.html">选酒理念</a>
+						</div>
+					</li>
+					<li class="baike"><a href="../Encyclopedia">酒事百科</a></li>
+					<li class="goods"><a href="/Product">推介产品</a>
+						<div class="subnav">
+							<a href="/Product/List/1">红葡萄酒</a><a href="/Product/List/2">白葡萄酒</a><a href="/Product/List/3">气泡酒及其它</a>
+						</div>
+					</li>
+					<li class="history"><a href="partners.html">合作伙伴</a>
+						<!--<div class="subnav">
+							<a href="history.html">夏梦酒庄</a>
+						</div>-->
+					</li>
+					<li class="contact"><a href="contact.html">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--main start-->
+<div class="main">
+	<div class="main_wrap">
+		<div class="sitenav"><a href="index.html">首页</a>&gt<a href="about_home.html">关于我们</a>&gt<span>品牌故事</span></div>
+		<h1><strong>品牌故事</strong><br /><span>Our Story</span></h1>
+		<div class="content our_bg">
+			<div class="con_box our_box">
+				<div class="our_left"><!--<img src="images/ourstory_01.jpg" />--><img src="images/ourstory_02.jpg" /><img src="images/ourstory_03.jpg" /></div>
+				<div class="our_right"><p><!--在《圣经故事》中，曾有过这样一幕：昏暗的烛光下，耶稣在十三个门徒面前，把面包和葡萄酒分发到每个人盘中，并说道：“面包是我的肉，葡萄酒是我的血。”那一刻起，葡萄变成了可以分享的生命之源，流淌在每个人的酒杯里，从此被赋予至高的意义。</p><br /><p>如今，葡萄酒的意义早已不限于此，它的生命，也不再只属于上帝和门徒。-->岁月的质感，纯粹的追求，让无数个葡萄酒品牌的发展历史，沉淀成优雅与荣耀的见证。</p><br /><p>亨丰团队创办法酒舍葡萄酒网站。我们认为选择一款适合自己的酒，如同选择一个爱人，会令人感到无比的愉悦和幸福。葡萄酒是美好的，她温润、甘醇、持久，在千百年的历练中，蔓延并集其精华，凝练成每一滴佳酿；葡萄酒的世界是丰富的，她的风格与风味、特色与特质的多样性无可穷尽，风情万种。</p><br /><p>我们的团队拥有丰富的葡萄酒知识及品酒经验，不断甄选百年历史的红酒佳酿，介绍酒庄历史，分享选酒理念，将红酒及亨丰的精神传递给每一个人——亨嘉之会，岁稔年丰。</p><br /><p>专注葡萄酒文化，分享经典好酒，做最贴心的品鉴专家。</p><br />
+                <p>法酒舍葡萄酒网站，以百年生命之水，为你开启香醇之旅。</p><br /></div>
+			</div>
+			<div class="other">
+				<div class="print"><a href="#">打印此页</a></div>
+				<span>|</span>
+				<div class="share">
+					<!--Baidu share start-->
+					<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+					<!--Baidu share end-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--main end-->
+<!--footer start-->
+<div class="bottom">
+	<div class="csrcode flexslider" id="focus_bigpic">
+		<ul class="slides">		
+		<li><a href="history.html">
+			<div class="box">
+				<h2>夏梦庄园</h2>
+				<img src="images/bottom_partner_01.jpg" />
+			</div>
+		</a></li>
+		<li><a href="history_02.html">
+			<div class="box">
+				<h2>亚历山大庄园</h2>
+				<img src="images/bottom_partner_02.jpg" />
+			</div>
+		</a></li>
+		<li><a href="history_03.html" class="last">
+			<div class="box">
+				<h2>查里 &bull; 凯宁庄园</h2>
+				<img src="images/bottom_partner_03.jpg" />
+			</div>
+		</a></li>
+		</ul>
+	</div>
+	<a href="../Encyclopedia">
+		<div class="box">
+			<h2>酒事百科</h2>
+			<img src="images/pic_02.jpg" />
+		</div>
+	</a>
+	<a href="#" class="last">
+		<div class="box">
+			<h2>品酒人生</h2>
+			<img src="images/pic_03.jpg" />
+		</div>
+	</a>
+</div>
+<div class="footer">
+    <p style="font-size:14px; font-weight:bold;">友好提醒：过量饮酒有害健康</p>
+	<p>法酒舍 FAJIUSHE, TRADING BY CROWN FAITH LIMITED亨丰有限公司<br>版权所有 Copyright &copy; 2014 All rights reserved.</p>
+	<p><a href="notices.html" style="color:#7e6b5a;">重要告示 Important Notices</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="privacy.html" style="color:#7e6b5a;">隐私政策 Privacy Policy</a></p>
+</div>
+<!--footer end-->
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav: false,
+        controlNav: false,
+      });
+    });
+</script>
+     <script type="text/javascript">
+         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb66a027a506247fc6469d63c6ac3711c' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>葡萄酒</title>
+	<link rel="stylesheet" type="text/css" href="style/base.css" />
+	<link rel="stylesheet" type="text/css" href="style/index.css" />
+	<link rel="stylesheet" type="text/css" href="style/list.css" />
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="header_wrap">
+		<div class="top"><span></span><a href="#" class="language">English</a></div>
+		<div class="header_box">
+			<div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+			<div class="nav">
+				<ul id="js_nav">
+					<li class="about"><a href="about.html">关于我们</a>
+						<div class="subnav">
+							<a href="ourstory2.html">品牌故事</a><a href="about.html">选酒理念</a>
+						</div>
+					</li>
+					<li class="baike"><a href="../Encyclopedia">酒事百科</a></li>
+					<li class="goods"><a href="/Product">推介产品</a>
+						<div class="subnav">
+							<a href="/Product/List/1">红葡萄酒</a><a href="/Product/List/2">白葡萄酒</a><a href="/Product/List/3">气泡酒及其它</a>
+						</div>
+					</li>
+					<li class="history"><a href="partners.html">合作伙伴</a>
+						<!--<div class="subnav">
+							<a href="history.html">夏梦酒庄</a><a href="history.html">亚历山大酒庄</a><a href="history.html">查理 &bull; 凯宁酒庄</a>
+						</div>-->
+					</li>
+					<li class="contact"><a href="contact.html">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--main start-->
+<div class="main">
+	<div class="main_wrap">
+		<div class="sitenav"><a href="index.html">首页</a>&gt<a href="#" target="_blank">推介产品</a>&gt<span>红葡萄酒</span></div>
+		<h1><strong>推介产品</strong><br /><span>Recommendation</span></h1>
+		<div class="goodslist">
+			<div class="goods_wrap">
+				<h4><span class="oth">红葡萄酒</span></h4>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_01.jpg" title="红葡萄酒" /></a>
+					<h5><span>拉哥杰古堡</span><br/><span>优级酿制2010佳酿</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_02.jpg" title="红葡萄酒" /></a>
+					<h5><span>Cabernet Franc </span><br/><span>品丽珠</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_01.jpg" title="红葡萄酒" /></a>
+					<h5><span>拉哥杰古堡</span><br/><span>优级酿制2010佳酿</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_02.jpg" title="红葡萄酒" /></a>
+					<h5><span>Cabernet Franc </span><br/><span>品丽珠</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_01.jpg" title="红葡萄酒" /></a>
+					<h5><span>拉哥杰古堡</span><br/><span>优级酿制2010佳酿</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_02.jpg" title="红葡萄酒" /></a>
+					<h5><span>Cabernet Franc </span><br/><span>品丽珠</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_01.jpg" title="红葡萄酒" /></a>
+					<h5><span>拉哥杰古堡</span><br/><span>优级酿制2010佳酿</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_02.jpg" title="红葡萄酒" /></a>
+					<h5><span>Cabernet Franc </span><br/><span>品丽珠</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_01.jpg" title="红葡萄酒" /></a>
+					<h5><span>拉哥杰古堡</span><br/><span>优级酿制2010佳酿</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_02.jpg" title="红葡萄酒" /></a>
+					<h5><span>Cabernet Franc </span><br/><span>品丽珠</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_01.jpg" title="红葡萄酒" /></a>
+					<h5><span>拉哥杰古堡</span><br/><span>优级酿制2010佳酿</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_02.jpg" title="红葡萄酒" /></a>
+					<h5><span>Cabernet Franc </span><br/><span>品丽珠</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_01.jpg" title="红葡萄酒" /></a>
+					<h5><span>拉哥杰古堡</span><br/><span>优级酿制2010佳酿</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_02.jpg" title="红葡萄酒" /></a>
+					<h5><span>Cabernet Franc </span><br/><span>品丽珠</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+				<div class="goodsbox">
+					<a href="goodsdetails.html" target="_blank"><img src="images/goods_02.jpg" title="红葡萄酒" /></a>
+					<h5><span>Cabernet Franc </span><br/><span>品丽珠</span></h5>
+					<p><span>别名卡门耐特，原种解百纳，原产法国，为法国古老的酿酒品种，世界各地均有栽培，是赤霞珠蛇龙珠的.......</span></p>
+					<a href="goodsdetails.html" target="_blank" class="more">&gt;&nbsp;了解详情</a>
+				</div>
+			</div>
+		</div>
+		<!--pager start-->
+		<div class="pager"><a href="#"><em class="page_prev"></em></a><a href="#" class="cur">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><span>......</span><a href="#">12</a><a href="#"><em class="page_next"></em></a></div>
+		<!--pager end-->
+	</div>
+</div>
+<!--main end-->
+<!--footer start-->
+<div class="bottom">
+	<div class="csrcode flexslider" id="focus_bigpic">
+		<ul class="slides">		
+		<li><a href="history.html">
+			<div class="box">
+				<h2>夏梦庄园</h2>
+				<img src="images/bottom_partner_01.jpg" />
+			</div>
+		</a></li>
+		<li><a href="history.html">
+			<div class="box">
+				<h2>亚历山大庄园</h2>
+				<img src="images/bottom_partner_02.jpg" />
+			</div>
+		</a></li>
+		<li><a href="history.html" class="last">
+			<div class="box">
+				<h2>查里 &bull; 凯宁庄园</h2>
+				<img src="images/bottom_partner_03.jpg" />
+			</div>
+		</a></li>
+		</ul>
+	</div>
+	<a href="../Encyclopedia">
+		<div class="box">
+			<h2>酒事百科</h2>
+			<img src="images/pic_02.jpg" />
+		</div>
+	</a>
+	<a href="#" class="last">
+		<div class="box">
+			<h2>品酒人生</h2>
+			<img src="images/pic_03.jpg" />
+		</div>
+	</a>
+</div>
+<div class="footer">
+	<p>FAJIUSHE, TRADING BY CROWN FAITH LIMITED.</p>
+	<p>Copyright &copy; 2014 All rights reserved. </p>
+</div>
+<!--footer end-->
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav: false,
+        controlNav: false,
+      });
+    });
+</script>
+     <script type="text/javascript">
+         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb66a027a506247fc6469d63c6ac3711c' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>
