@@ -29,10 +29,17 @@ namespace WineWeb.Controllers
             string phone = Request.Form["email"];
             string email = Request.Form["email"];
             string content = Request.Form["content"];
-            message =  send(name,gender, company, address, tel, fax, phone, email, content);
+
+            //收件人
+            string sendEmailTo = System.Configuration.ConfigurationManager.AppSettings["sendEmailTo"];
+            string sendEmailTo1 = System.Configuration.ConfigurationManager.AppSettings["sendEmailTo1"];
+
+            message = send(name, gender, company, address, tel, fax, phone, email, content, sendEmailTo);
+            message = send(name, gender, company, address, tel, fax, phone, email, content, sendEmailTo1);
+
             Response.Redirect("/wine/contact_success.html");
         }
-       public Message send(string name, string gender, string company, string address, string tel, string fax, string phone, string email, string content)
+       public Message send(string name, string gender, string company, string address, string tel, string fax, string phone, string email, string content, string sendEmailTo)
        {
 
            Message message = new Message();
@@ -47,15 +54,15 @@ namespace WineWeb.Controllers
            {
                string sendEmailFrom = System.Configuration.ConfigurationManager.AppSettings["sendEmailFrom"];
                string sendEmailFromPWD = System.Configuration.ConfigurationManager.AppSettings["sendEmailFromPWD"];
-               string sendEmailTo = System.Configuration.ConfigurationManager.AppSettings["sendEmailTo"];
+           
 
-               System.Net.Mail.MailAddress from = new System.Net.Mail.MailAddress(sendEmailFrom, "夏梦庄园网站系统通知"); //填写电子邮件地址，和显示名称
+               System.Net.Mail.MailAddress from = new System.Net.Mail.MailAddress(sendEmailFrom, "法酒社网站系统通知"); //填写电子邮件地址，和显示名称
                System.Net.Mail.MailAddress to = new System.Net.Mail.MailAddress(sendEmailTo, "网站管理员"); //填写邮件的收件人地址和名称
                //设置好发送地址，和接收地址，接收地址可以是多个
                System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
                mail.From = from;
                mail.To.Add(to);
-               mail.Subject = "夏梦庄园web 网站用户反馈";
+               mail.Subject = "法酒社web 网站用户反馈";
                mail.Body = " <h3>留言内容:</h3></br> " +
                              content + "</br> " +
                            "<h3>用户信息</h13></br> " +
