@@ -1,0 +1,91 @@
+﻿@model WineWeb.Models.Cheers
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "CheersManage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Cheers</legend>
+
+       @* @Html.HiddenFor(model => model.Id)*@
+        <input id="Id" type="hidden" name="Id" value="@Model.Id" />
+
+         <div class="editor-label">
+                @Html.LabelFor(model => model.thum, "缩略图  最佳：420 x 230像素")
+                @Html.ValidationMessageFor(model => model.thum)
+            </div>
+            <div class="editor-field">
+                @if (!string.IsNullOrEmpty(Model.thum))
+                {
+                    <p>@Html.DisplayFor(model => model.thum)  </p>
+                    <p class="hidden">@Html.EditorFor(model => model.thum)</p>
+            
+                }
+                else
+                {
+                    <p>暂无图片 </p>
+                }
+                <input id="thum" type="file" name="thum" value="@Model.thum"/>
+            </div>
+
+         <div class="editor-label">
+            @Html.LabelFor(model => model.date, "日期")
+        </div>
+        <div class="editor-field">
+            <input type="text" name="DateTime" id="DateTime" value="@Model.date" />
+           @* <input type="text" name="DateTime" id="DateTime" value="@Model.date.ToShortDateString()" />*@
+            @Html.ValidationMessageFor(model => model.date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.title1,"标题")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.title1)
+            @Html.ValidationMessageFor(model => model.title1)
+        </div>
+
+          <div class="editor-label">
+            @Html.LabelFor(model => model.title2,"导读")
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.title2, new { rows = "3", cols = "80", style = "width:99%"}) 
+            @Html.ValidationMessageFor(model => model.title2)
+        </div>
+          <div class="editor-field">
+            @Html.TextAreaFor(model => model.content, new { rows = "10", cols = "80", style = "width:99%", id = "editor1", name = "editor1" })  
+            <script type="text/javascript">
+                var editor = CKEDITOR.replace('editor1');
+                CKFinder.SetupCKEditor(editor, '/ckfinder/');
+             </script> 
+            @Html.ValidationMessageFor(model => model.content)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <link href="~/Content/themes/base/jquery.ui.datepicker.css" rel="stylesheet" />
+   <script>
+        $(function () {
+            //alert("");
+            //$("#DateTime").datepicker({});
+        });
+    </script>
+}

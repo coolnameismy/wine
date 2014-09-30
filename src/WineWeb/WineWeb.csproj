@@ -198,12 +198,14 @@
     <Compile Include="Areas\Admin\Controllers\Admin_defaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\EncyclopediaManageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductManageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CheersManageController.cs" />
     <Compile Include="BL\AppInitDB.cs" />
     <Compile Include="BL\Common.cs" />
     <Compile Include="BL\ExtendMethod.cs" />
     <Compile Include="BL\FileManage.cs" />
     <Compile Include="BL\HtmlHelpers.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CheersController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EmailReceiveController.cs" />
     <Compile Include="Controllers\EncyclopediaController.cs" />
@@ -218,6 +220,7 @@
     <Compile Include="Models\Pagination.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductCategory.cs" />
+    <Compile Include="Models\Cheers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -454,6 +457,9 @@
     <Content Include="Areas\Admin\Views\EncyclopediaManage\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ProductManage\Create.cshtml" />
     <Content Include="Areas\Admin\Views\ProductManage\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CheersManage\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CheersManage\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CheersManage\Index.cshtml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -536,6 +542,8 @@
     <Content Include="Views\Product\List.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Encyclopedia\Details.cshtml" />
+    <Content Include="Views\Cheers\Details.cshtml" />
+    <Content Include="Views\Cheers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
